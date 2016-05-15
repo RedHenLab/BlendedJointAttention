@@ -6,7 +6,7 @@ faceCascade2 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_defau
 faceCascade3 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
 faceCascade4 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_extended.xml')
 
-frame = cv2.imread('Test3.jpg')
+frame = cv2.imread('/Test_Images/Test3.jpg')
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
@@ -26,4 +26,4 @@ for (x, y, w, h) in faces3:
     roi_gray = gray[y:y+h, x:x+w]
     roi_color = frame[y:y+h, x:x+w]
 
-cv2.imwrite( "Result3.jpg", frame);
+cv2.imwrite( "/Result_Images/Result3.jpg", frame);
