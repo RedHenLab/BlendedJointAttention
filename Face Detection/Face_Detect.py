@@ -20,7 +20,7 @@ while True:
         faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
         faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
         faces3 = faceCascade3.detectMultiScale(gray, 1.1, 5)
-        faces4 = faceCascade3.detectMultiScale(gray, 1.1, 5)
+        faces4 = faceCascade4.detectMultiScale(gray, 1.1, 5)
         # Draw a rectangle around the faces
         for (x, y, w, h) in faces1:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
@@ -34,7 +34,7 @@ while True:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (127, 128, 0), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
-        for (x, y, w, h) in faces3:
+        for (x, y, w, h) in faces4:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 128, 127), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
