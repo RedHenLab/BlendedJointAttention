@@ -14,6 +14,14 @@ Sub-repositories:
 
 ----------------------------------------
 
+Required Packeges:
+
+1. Python 2.7.x
+	i. Numpy
+	ii. Bob
+	iii. Matplotlib
+2. OpenCV (One must check compatibility with python and OS)
+
 Authors:
 
 1. Mark Turner
