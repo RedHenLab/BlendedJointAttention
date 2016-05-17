@@ -4,7 +4,7 @@ from bob.ip.draw import box, cross
 from bob.ip.color import rgb_to_gray
 import cv2
 import numpy as np
-
+	
 lena = cv2.imread('Test3.jpg')
 lena_gray = cv2.cvtColor(lena, cv2.COLOR_BGR2GRAY)
 faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
