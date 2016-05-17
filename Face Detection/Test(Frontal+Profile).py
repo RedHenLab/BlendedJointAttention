@@ -1,6 +1,7 @@
 import cv2
 import sys
 
+#import face cascades
 faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
 faceCascade2 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
 faceCascade3 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
