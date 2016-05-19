@@ -18,7 +18,7 @@ while(cap.isOpened()):
 	
 		#detect face
 		frame = cv2.cvtColor(frame,cv2.COLOR_RGB2GRAY)
-		faces = cv2.CascadeClassifier('haarcascade_eye.xml')
+		faces = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
 		detected = faces.detectMultiScale(frame, 1.3, 5)
 	
 		#faces = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
