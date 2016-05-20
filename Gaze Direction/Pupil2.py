@@ -20,7 +20,9 @@ for (x, y, w, h) in faces1:
     eyes2 = eyecascade2.detectMultiScale(gray, 1.5, 6)
     for (x1, y1, w1, h1 ) in eyes1:
         cv2.rectangle(frame, (x1, y1), (x1+w1, y1+h1), (128, 0, 127), 2)
-        split = frame[y1:y1+h1,x1:x1+w1,]
+        split = frame[y1:y1+h1,x1:x1+w1]
+        split = cv2.Canny(split,100,200)
+        frame[y1:y1+h1,x1:x1+w1]= split        
         flag = 1
     if flag == 0:
         for (x2, y2, w2, h2 ) in eyes2:
