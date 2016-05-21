@@ -28,9 +28,11 @@ Required Packeges:
 <li> OpenCV (One must check compatibility with python and OS) </li>
 <li> DLib </li>
 
+-----------------------------------------
+
 Authors:
 
-1. Mark Turner
+1. Mark Turner 
 2. Francis Steen
 3. Soumitra Agarwal
 4. Debayan Das
