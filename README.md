@@ -17,18 +17,26 @@ Sub-repositories:
 
 Required Packeges:
 
-1. Python 2.7.x
-	i. Numpy
-	ii. Bob
-	iii. Matplotlib
-2. OpenCV (One must check compatibility with python and OS)
-3. DLib
+<ol>
+	<li> Python 2.7.x
+	<ul>
+		<li> Numpy </li>
+		<li> Bob </li>
+		<li> Matplotlib </li>
+	</ul>
+	</li>
+<li> OpenCV (One must check compatibility with python and OS) </li>
+<li> DLib </li>
+</ol>
+
+-----------------------------------------
 
 Authors:
 
-1. Mark Turner
-2. Francis Steen
-3. Soumitra Agarwal
-4. Debayan Das
-
+<ol>
+ 	<li> Dr.Mark Turner </li>
+ 	<li> Dr.Francis Steen </li>
+	<li> <a href = "https://github.com/SoumitraAgarwal" target="_blank">Soumitra Agarwal</a> :neckbeard: </li>
+	<li> Debayan Das </li>
+</ol>
 ----------------------------------------
