@@ -44,6 +44,10 @@
     font-size: 200%;
     display: block;
   }
+  .site_desc {
+    font-size: 100%;
+    display: block;
+  }
   @include media-query($medium-screen) {
     text-align: right;
     margin: 0 auto;
