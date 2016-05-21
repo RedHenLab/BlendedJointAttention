@@ -36,7 +36,7 @@ Authors:
 <ol>
  	<li> Dr.Mark Turner </li>
  	<li> Dr.Francis Steen </li>
-	<li> Soumitra Agarwal :neckbeard: </li>
+	<li> [Soumitra Agarwal](https://github.com/SoumitraAgarwal/) :neckbeard: </li>
 	<li> Debayan Das </li>
 </ol>
 ----------------------------------------
