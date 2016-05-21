@@ -17,12 +17,16 @@ Sub-repositories:
 
 Required Packeges:
 
-1. Python 2.7.x
-	i. Numpy
-	ii. Bob
-	iii. Matplotlib
-2. OpenCV (One must check compatibility with python and OS)
-3. DLib
+<ol>
+	<li> Python 2.7.x
+	<ul>
+		<li> Numpy </li>
+		<li> Bob </li>
+		<li> Matplotlib </li>
+	</ul>
+	</li>
+<li> OpenCV (One must check compatibility with python and OS) </li>
+<li> DLib </li>
 
 Authors:
 
