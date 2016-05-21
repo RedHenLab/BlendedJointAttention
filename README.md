@@ -32,9 +32,10 @@ Required Packeges:
 
 Authors:
 
-1. Mark Turner 
-2. Francis Steen
-3. Soumitra Agarwal
-4. Debayan Das
-
+<ol>
+ 	<li> Dr.Mark Turner </li>
+ 	<li> Dr.Francis Steen </li>
+	<li> Soumitra Agarwal :neckbeard: </li>
+	<li> Debayan Das </li>
+</ol>
 ----------------------------------------
