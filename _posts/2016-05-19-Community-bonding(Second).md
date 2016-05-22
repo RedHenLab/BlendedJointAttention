@@ -10,7 +10,7 @@ comments: true
 
 <img src="{{ site.url }}/img/b.jpg" alt=""><br>
 
-Contributions to an open source organisations might be related to development, design etc. When your mentors send you a Raspberry Pi to set up a digital TV recording station in India, you know you are up to something serious.
+>Contributions to an open source organisations might be related to development, design etc. When your mentors send you a Raspberry Pi to set up a digital TV recording station in India, you know you are up to something serious.
 
 The packets were looked up, ordered, dispatched and recieved with a little hassle here and there.
 
