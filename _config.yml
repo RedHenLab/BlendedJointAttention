@@ -6,7 +6,7 @@
 title:       "Blended Joint Attention"
 description: "The blog of work updates of the Google summer of code project '16 (and beyond) Red Hen Labs"
 url:         "http://soumitraagarwal.github.io/BlendedJointAttention"
-gems: ["jemoji"]
+gems:         ["jemoji"]
 
 #
 ###################################
@@ -33,7 +33,7 @@ kramdown:
 #
 owner:
   name: Soumitra Agarwal
-  avatar: avatar.jpg
+  avatar: d.jpg
   meme1 : a.jpg
   job: "Open source fan boy, Aspiring data scientist"
   bio: "Yin and Yang of BCJA"
