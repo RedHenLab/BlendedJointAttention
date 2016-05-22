@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 	Opening the world to new possibilities
-excerpt: "There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted ..."
+excerpt: "Contributions to an open source organisations might be related to development, design etc. When your mentors send you a Raspberry Pi to set up a digital TV recording station in India, you know you are up ..."
 categories: [Community bonding]
 comments: true
 ---
@@ -10,23 +10,15 @@ comments: true
 
 <img src="{{ site.url }}/img/b.jpg" alt=""><br>
 
-There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted [Red Hen Lab](https://sites.google.com/site/distributedlittleredhen/home) is a global laboratory and consortium for research into multimodal communication. This year, I being one of the `GSoC'ers` would be contributing into gesture recognition and other things, as discussed in the community bonding period.
+Contributions to an open source organisations might be related to development, design etc. When your mentors send you a Raspberry Pi to set up a digital TV recording station in India, you know you are up to something serious.
 
-Community bonding might be tough for introverts. It all began with a skype call. 
+The packes were looked up, ordered, dispatched and recieved with a little hassle here and there.
 
-*A lot can happen over a skype call. Specially if it lasts 2 hours* 
-{: .notice}
+Setting up wasn't so tough either. Though without the proper HD Homerun tuner, we cannot actually record the television, but we can be sure of the fact that we can once we recieve it. 
 
-Proposals are generally overcooked. So was mine, full of quartos and folios of work which probably would be very tough to pull off during the coding period. So, the most important thing that remained now, was indexing tasks according to their priority so that nothing important is left incomplete. 
+### The setup
 
-### Towards the end of the tunnel
-
-*“Be genuinely interested in everyone you meet and everyone you meet will be genuinely interested in you”* 			― Rasheed Ogunlaru
-{: .notice}
-
-GSoC is a lot about meeting and interacting with new people. Even a newer you. People come with exxperience. That is what humans rely on to progress. So we interacted with new people, who have been contributing to the Organisation. 
-
-In the end, I was added as a `member` of the organisation on Github. There was a lot to gain and nothing to lose. No one should miss such an arbitrage opprtuinity. :wink:
+<img src="{{ site.url }}/img/b.jpg" alt=""><br>
 
 ###### Thank you for reading 
 
