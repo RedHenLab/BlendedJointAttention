@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 	What we did, What we wish we did
-excerpt: "There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted ..."
+excerpt: "Here is a list of things I could do during the community bolding period :..."
 categories: [Community bonding]
 comments: true
 ---
