@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 	Opening the worl to new possibilities
+title: 	Opening the world to new possibilities
 excerpt: "There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted ..."
 categories: [Community bonding]
 comments: true
 ---
 
-### Creating a Raspberry pi DVR setup
+### Creating a Raspberry Pi DVR setup
 
-<img src="{{ site.url }}/img/a.jpg" alt=""><br>
+<img src="{{ site.url }}/img/b.jpg" alt=""><br>
 
 There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted [Red Hen Lab](https://sites.google.com/site/distributedlittleredhen/home) is a global laboratory and consortium for research into multimodal communication. This year, I being one of the `GSoC'ers` would be contributing into gesture recognition and other things, as discussed in the community bonding period.
 
