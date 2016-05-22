@@ -54,6 +54,43 @@ section.post {
 	}
 }
 
+
+figure {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include clearfix();
+  img {
+    margin-bottom: 10px;
+    @include rounded(4px);
+  }
+  &.half {
+    @media only screen and (min-width: 62.5em) {
+      img {
+        width: calc(50% - 4px);
+        float: left;
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+      figcaption {
+        clear: left;
+      }
+    }
+  }
+  &.third {
+    @media only screen and (min-width: 62.5em) {
+      img {
+        width: calc(33.3% - 6px);
+        float: left;
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+      figcaption {
+        clear: left;
+      }
+    }
+  }
+}
 // Post meta
 .post-meta {
   font-size: 13px;
