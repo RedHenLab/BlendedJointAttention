@@ -3,16 +3,17 @@
 # Site wide configuration
 ####################################
 #
-title:       "Leonids Jekyll theme"
-description: "Clean Jekyll blog theme called Leonids."
-url:         "http://127.0.0.1:4000"
+title:       "Blended Joint Attention"
+description: "The blog of work updates of the Google summer of code project '16 (and beyond) Red Hen Labs"
+url:         "http://soumitraagarwal.github.io/BlendedJointAttention"
+gems: ["jemoji"]
 
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
+timezone:          Asia/Kolkata
 markdown:          kramdown
 highlighter:       rouge
 excerpt_separator: <!--more-->
@@ -33,10 +34,11 @@ kramdown:
 owner:
   name: Soumitra Agarwal
   avatar: avatar.jpg
+  meme1 : a.jpg
   job: "Open source fan boy, Aspiring data scientist"
   bio: "Yin and Yang of BCJA"
   bio2: "The blog of work updates of the Google summer of code project '16 (and beyond) Red Hen Labs"
-  email:
+  email: "agarwalsoumitra1504@gmail.com"
   disqus-shortname:
   twitter:  TheRealSoumitra
   facebook: soumitra.agarwal.1
