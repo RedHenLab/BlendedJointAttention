@@ -23,6 +23,7 @@ Here is a list of things I could do during the community bolding period :
 
 <ol start='2'>
 	<li> Started with setting up an RPi Digital video recording station. Oh I love hardware, and specially when you get recognised to use it. </li>
+	<li> Pushed 250 commits to different repos (including <a href = "https://github.com/SoumitraAgarwal/BlendedJointAttention">blended classical attention</a> for Red Hen Lab) in a week. By far the best Open Source week I have had.</li>
 	<li> Set up a personal <a target = "_blank" href = "soumitraagarwal.github.io">blog</a>, which should be updated here and there sometime later. <i>Don't procrastinate</i> . Okay I am doing it. :unamused: </li>
 	<li> Set up this record of updates, for my Google summer of code project </li>
 	<li> Though about the odds which would favour an upside down mermaid. <i>Not the correct place Soumitra</i>. Ohh, nevermind :sweat_smile: </li>
