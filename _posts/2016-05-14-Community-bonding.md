@@ -8,7 +8,8 @@ comments: true
 
 ### Into the wild
 
-<img src= "{{ site.url }}/img/{{ site.meme1 }}"><br>
+<img src="{{ site.url }}/img/a.jpg" alt=""><br>
+
 There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted [Red Hen Lab](https://sites.google.com/site/distributedlittleredhen/home) is a global laboratory and consortium for research into multimodal communication. This year, I being one of the `GSoC'ers` would be contributing into gesture recognition and other things, as discussed in the community bonding period.
 
 Community bonding might be tough for introverts. It all began with a skype call. 
@@ -20,7 +21,9 @@ Proposals are generally overcooked. So was mine, full of quartos and folios of w
 
 ### Towards the end of the tunnel
 
-> Don't wish it were easier. Wish you were better.
+*“Be genuinely interested in everyone you meet and everyone you meet will be genuinely interested in you”* 
+― Rasheed Ogunlaru
+{: .notice}
 
 GSoC is a lot about meeting and interacting with new people. Even a newer you. People come with exxperience. That is what humans rely on to progress. So we interacted with new people, who have been contributing to the Organisation. 
 
