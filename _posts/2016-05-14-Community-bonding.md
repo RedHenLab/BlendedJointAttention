@@ -18,60 +18,9 @@ Community bonding might be tough for introverts. It all began with a skype call.
 
 Proposals are generally overcooked. So was mine, full of quatros and folios of work which probably would be very tough to pull off during the coding period. So, the most important thing that remained now, was indexing tasks according to their priority so that nothing important is left incomplete. 
 
-> Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
-## List Types
+### Towards the end of the tunnel
 
-### Ordered Lists
+> Don't wish it were easier. Wish you were better.
 
-1. Item one
-   1. sub item one
-   2. sub item two
-   3. sub item three
-2. Item two
+GSoC is a lot about meeting and interacting with new people. Even a newer you. 
 
-### Unordered Lists
-
-* Item one
-* Item two
-* Item three
-
-## Tables
-
-| Header 1 | Header 2 | Header 3 |
-|:--------|:-------:|--------:|
-| cell 1   | cell 2   | cell 3   |
-| cell 4   | cell 5   | cell 6   |
-|----
-| cell 1   | cell 2   | cell 3   |
-| cell 4   | cell 5   | cell 6   |
-|=====
-| Foot 1   | Foot 2   | Foot 3   |
-
-## Code Snippets
-
-{% highlight css %}
-#container {
-  float: left;
-  margin: 0 -240px 0 0;
-  width: 100%;
-}
-{% endhighlight %}
-
-## Buttons
-
-Make any link standout more when applying the `.btn` class.
-
-{% highlight html %}
-<a href="#" class="btn btn-success">Success Button</a>
-{% endhighlight %}
-
-<div markdown="0"><a href="#" class="btn">Primary Button</a></div>
-<div markdown="0"><a href="#" class="btn btn-success">Success Button</a></div>
-<div markdown="0"><a href="#" class="btn btn-warning">Warning Button</a></div>
-<div markdown="0"><a href="#" class="btn btn-danger">Danger Button</a></div>
-<div markdown="0"><a href="#" class="btn btn-info">Info Button</a></div>
-
-## Notices
-
-**Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
-{: .notice}
