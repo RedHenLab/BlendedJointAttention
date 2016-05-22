@@ -16,7 +16,7 @@ Community bonding might be tough for introverts. It all began with a skype call.
 *A lot can happen over a skype call. Specially if it lasts 2 hours* 
 {: .notice}
 
-Proposals are generally overcooked. The most important thing that remained now, was indexing what actually could be completed in the time period of the program. 
+Proposals are generally overcooked. So was mine, full of quatros and folios of work which probably would be very tough to pull off during the coding period. So, the most important thing that remained now, was indexing tasks according to their priority so that nothing important is left incomplete. 
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
 ## List Types
