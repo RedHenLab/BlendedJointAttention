@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 	Pristine eyes to see the world
-excerpt: "There is a lot to Open-Source. Even more when they deal with"
+excerpt: "There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted ..."
 categories: [Community bonding]
 comments: true
 ---
