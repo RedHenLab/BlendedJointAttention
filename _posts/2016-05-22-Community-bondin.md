@@ -6,9 +6,9 @@ categories: [Community bonding]
 comments: true
 ---
 
-### What we did
+<img src="{{ site.url }}/img/c.jpg" alt=""><br>
 
-<img src="{{ site.url }}/img/b.jpg" alt=""><br>
+### What we did
 
 There is a lot to Open-Source. Even more when your organisation deals with lots of data. The distibuted [Red Hen Lab](https://sites.google.com/site/distributedlittleredhen/home) is a global laboratory and consortium for research into multimodal communication. This year, I being one of the `GSoC'ers` would be contributing into gesture recognition and other things, as discussed in the community bonding period.
 
