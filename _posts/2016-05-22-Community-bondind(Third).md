@@ -10,24 +10,12 @@ comments: true
 
 ### What we did
 
-Here is a lost of things I could do during the community bolding period :
+Here is a list of things I could do during the community bolding period :
 
-0. Bonded with the Red Hen Lab community. 
-Community bonding might be tough for introverts. It all began with a skype call. 
-
-*A lot can happen over a skype call. Specially if it lasts 2 hours* 
-{: .notice}
-
-Proposals are generally overcooked. So was mine, full of quartos and folios of work which probably would be very tough to pull off during the coding period. So, the most important thing that remained now, was indexing tasks according to their priority so that nothing important is left incomplete. 
-
-### Towards the end of the tunnel
-
-*“Be genuinely interested in everyone you meet and everyone you meet will be genuinely interested in you”* 			― Rasheed Ogunlaru
-{: .notice}
-
-GSoC is a lot about meeting and interacting with new people. Even a newer you. People come with exxperience. That is what humans rely on to progress. So we interacted with new people, who have been contributing to the Organisation. 
-
-In the end, I was added as a `member` of the organisation on Github. There was a lot to gain and nothing to lose. No one should miss such an arbitrage opprtuinity. :wink:
+<ol start='0'>
+	<li>Got myself the title of a Red Hen. Look for me <a target="_blank" href = "https://sites.google.com/site/distributedlittleredhen/home/profiles-of-red-hen-participants">here</a>, and find out which Red Hen are you <a target="_blank" href="https://www.youtube.com/watch?v=dA5CuN7YJdM&feature=youtu.be">here</a> </li>
+	<li>Bonded with the Red Hen Lab community. </li>
+</ol>
 
 ###### Thank you for reading 
 
