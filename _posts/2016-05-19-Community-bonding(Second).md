@@ -24,7 +24,10 @@ Started as this :
 
 Now we are here :
 
-<img src="{{ site.url }}/img/f.jpg"><img src="{{ site.url }}/img/g.jpg">
+<figure class = "half">
+	<img src="{{ site.url }}/img/f.jpg">
+	<img src="{{ site.url }}/img/g.jpg">
+</figure>
 
 Just in case someone is wondering, or if you have read so far, this obviously in not a complete setup. But soon will be. Any suggestions on tuners for a HDHomerun in India are welcome.
 
