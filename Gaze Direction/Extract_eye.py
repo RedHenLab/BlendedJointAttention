@@ -8,7 +8,7 @@ faceCascade2 = cv2.CascadeClassifier('haarcascades/haarcascade_profileface.xml')
 eyecascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
 eyecascade2 = cv2.CascadeClassifier('haarcascades/haarcascade_eye_tree_eyeglasses.xml')
 
-frame = cv2.imread('Test_Images/Test2.jpg')
+frame = cv2.imread('Test_Images/Test3.jpg')
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
@@ -33,7 +33,7 @@ for (x, y, w, h) in faces1:
 
 if flag == 0:
 	for (x, y, w, h) in faces2:
-		cv2.rectangle(frame, (x, y), (x+herew, y+h), (60, 60, 135), 2)
+		cv2.rectangle(frame, (x, y), (x+w, y+h), (60, 60, 135), 2)
 		eyes1 = eyecascade1.detectMultiScale(gray, 1.7, 6)
 		eyes2 = eyecascade2.detectMultiScale(gray, 1.7, 6)
 		for (x1, y1, w1, h1 ) in eyes1:
