@@ -46,4 +46,4 @@ if flag == 0:
 					cv2.rectangle(frame, (x2, y2), (x2+w2, y2+h2), (111, 32, 111), 2)
 					split = frame[y2:y2+h2,x2:x2+w2]
 
-# cv2.imwrite('Result_Images/Result2.jpg', frame);
+cv2.imwrite('Result_Images/eye.jpg', split);
