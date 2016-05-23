@@ -24,7 +24,7 @@ Proposals are generally overcooked. So was mine, full of quartos and folios of w
 *“Be genuinely interested in everyone you meet and everyone you meet will be genuinely interested in you”* 			― Rasheed Ogunlaru
 {: .notice}
 
-GSoC is a lot about meeting and interacting with new people. Even a newer you. People come with exxperience. That is what humans rely on to progress. So we interacted with new people, who have been contributing to the Organisation. 
+GSoC is a lot about meeting and interacting with new people. Even a newer you. People come with experience. That is what humans rely on to progress. So we interacted with new people, who have been contributing to the organisation. 
 
 In the end, I was added as a `member` of the organisation on Github. There was a lot to gain and nothing to lose. No one should miss such an arbitrage opprtuinity. :wink:
 
