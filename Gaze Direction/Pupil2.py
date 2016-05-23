@@ -29,7 +29,7 @@ for (x, y, w, h) in faces1:
 		for i in circles[0,:]:
 			cv2.circle(split,(i[0],i[1]),i[2],(0,255,0),2)
 			cv2.circle(split,(i[0],i[1]),2,(0,0,255),3)
-			cv2.imwrite('eye.jpg', split);
+			cv2.imwrite('Result_images/eye.jpg', split);
 			print(1)
     if flag == 0:
         for (x2, y2, w2, h2 ) in eyes2:
@@ -58,4 +58,4 @@ if flag == 0:
 				for (x2, y2, w2, h2 ) in eyes2:
 					cv2.rectangle(frame, (x2, y2), (x2+w2, y2+h2), (111, 32, 111), 2)
 					split = frame[y2:y2+h2,x2:x2+w2]
-cv2.imwrite('Result_Images/Result2.jpg', frame);
+# cv2.imwrite('Result_Images/Result2.jpg', frame);
