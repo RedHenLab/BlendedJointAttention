@@ -45,5 +45,6 @@ if flag == 0:
 				for (x2, y2, w2, h2 ) in eyes2:
 					cv2.rectangle(frame, (x2, y2), (x2+w2, y2+h2), (111, 32, 111), 2)
 					split = frame[y2:y2+h2,x2:x2+w2]
-
-cv2.imwrite('Result_Images/eye.jpg', split);
+					flag = 1
+if flag ==1 :
+	cv2.imwrite('Result_Images/eye.jpg', split);
