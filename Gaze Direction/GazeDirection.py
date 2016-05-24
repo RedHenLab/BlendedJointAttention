@@ -23,9 +23,9 @@ for (x, y, w, h) in faces1:
 		cv2.rectangle(frame, (x1, y1), (x1+w1, y1+h1), (128, 0, 127), 2)
 		split = frame[y1:y1+h1,x1:x1+w1]
 		keypoints = detector.detect(split)
-		cv2.circle(split, [x1,y1+h1/2],[x1+w1, y1+h1/2], 0.5)
+		cv2.circle(split, [int(x1),int(y1+h1/2)],[int(x1+w1), int(y1+h1/2)], 1)
 		for kp in keypoints :
-   			cv2.circle(split, kp.pt, 0.5)
+   			cv2.circle(split, [int(kp.pt[0]),int(kp.pt[1])], 1)
 		flag = 1
 
     if flag == 0:
@@ -33,9 +33,9 @@ for (x, y, w, h) in faces1:
 			cv2.rectangle(frame, (x2, y2), (x2+w2, y2+h2), (0, 128, 127), 2)
 			split = frame[y2:y2+h2,x2:x2+w2]
 			keypoints = detector.detect(split)
-			cv2.circle(split, [x1,y1+h1/2],[x1+w1, y1+h1/2], 0.5)
+			cv2.circle(split, [int(x1),int(y1+h1/2)],[int(x1+w1), int(y1+h1/2)], 1)
 			for kp in keypoints :
-	   			cv2.circle(split, kp.pt, 0.5)
+	   			cv2.circle(split, [int(kp.pt[0]),int(kp.pt[1])], 1)
 			flag = 1
 
 if flag == 0:
@@ -47,9 +47,10 @@ if flag == 0:
 			cv2.rectangle(frame, (x1, y1), (x1+w1, y1+h1), (111, 111, 32), 2)
 			split = frame[y1:y1+h1, x1:x1+w1]
 			keypoints = detector.detect(split)
-			cv2.circle(split, [x1,y1+h1/2],[x1+w1, y1+h1/2], 0.5)
+			print(int(x1+w1), int(y1+h1/2))
+			cv2.circle(split, [int(x1),int(y1+h1/2)],[int(x1+w1), int(y1+h1/2)], 1)
 			for kp in keypoints :
-	   			cv2.circle(split, kp.pt, 0.5)
+	   			cv2.circle(split, [int(kp.pt[0]),int(kp.pt[1])], 1)
 			flag = 1
 
 			if flag == 0 :
@@ -57,8 +58,8 @@ if flag == 0:
 					cv2.rectangle(frame, (x2, y2), (x2+w2, y2+h2), (111, 32, 111), 2)
 					split = frame[y2:y2+h2,x2:x2+w2]
 					keypoints = detector.detect(split)
-					cv2.circle(split, [x1,y1+h1/2],[x1+w1, y1+h1/2], 0.5)
+					cv2.circle(split, [int(x1),int(y1+h1/2)],[int(x1+w1), int(y1+h1/2)], 1)
 					for kp in keypoints :
-	   					cv2.circle(split, kp.pt, 0.5)
+			   			cv2.circle(split, [int(kp.pt[0]),int(kp.pt[1])], 1)
 					flag = 1
 cv2.imwrite("Result_Images/Result_Gaze_1.jpg", split)
