@@ -24,6 +24,7 @@ for (x, y, w, h) in faces1:
     eyes2 = eyecascade2.detectMultiScale(gray, 1.5, 6)
     for (x1, y1, w1, h1 ) in eyes1:
 		cv2.rectangle(frame, (x1, y1), (x1+w1, y1+h1), (128, 0, 127), 2)
+		#extract eye
 		split = frame[y1:y1+h1,x1:x1+w1]
 		split = cv2.Canny(split,100,200)
 		circles = cv2.HoughCircles(split,cv2.HOUGH_GRADIENT,1,20,param1=50,param2=30,minRadius=0,maxRadius=0)
