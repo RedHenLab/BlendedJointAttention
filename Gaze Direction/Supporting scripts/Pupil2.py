@@ -13,16 +13,22 @@ gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
 faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
-# Draw a rectangle around the faces
+
+#Draw flag to check if a face is detected
 flag = 0
+
+# Draw a rectangle around the faces
 for (x, y, w, h) in faces1:
     cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
     eyes1 = eyecascade1.detectMultiScale(gray, 1.5, 6)
     eyes2 = eyecascade2.detectMultiScale(gray, 1.5, 6)
     for (x1, y1, w1, h1 ) in eyes1:
 		cv2.rectangle(frame, (x1, y1), (x1+w1, y1+h1), (128, 0, 127), 2)
+		#extract eye (copy everywhere)
 		split = frame[y1:y1+h1,x1:x1+w1]
 		split = cv2.Canny(split,100,200)
+
+		#detect circle (copy everywhere)
 		circles = cv2.HoughCircles(split,cv2.HOUGH_GRADIENT,1,20,param1=50,param2=30,minRadius=0,maxRadius=0)
 		circles = np.uint16(np.around(circles))
 		flag = 1
