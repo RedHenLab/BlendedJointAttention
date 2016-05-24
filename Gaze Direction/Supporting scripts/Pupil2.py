@@ -13,8 +13,11 @@ gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
 faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
-# Draw a rectangle around the faces
+
+#Draw flag to check if a face is detected
 flag = 0
+
+# Draw a rectangle around the faces
 for (x, y, w, h) in faces1:
     cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
     eyes1 = eyecascade1.detectMultiScale(gray, 1.5, 6)
