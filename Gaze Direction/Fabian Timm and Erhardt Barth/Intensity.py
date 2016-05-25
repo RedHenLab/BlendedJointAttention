@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('../Result_Images/eye.jpg')
+img = cv2.imread('../Result_Images/eye1.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 minin = 1000000
 minj=0
@@ -13,6 +13,7 @@ for i in range(gray.shape[0]):
 			minin=gray[i][j]
 			mini=i
 			minj=j
+			print(mini,minj)
 
-cv2.circle(img,[mini,minj],3,(0,0,255))
+cv2.circle(img,(mini,minj),4,(0,0,255))
 cv2.imwrite('../Result_Images/eye2.jpg', img);
