@@ -2,14 +2,14 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('../Result_images/Eye.jpg',0)
+img = cv2.imread('../Result_Images/eye.jpg',0)
 
 # Output dtype = cv2.CV_8U
 sobelx8u = cv2.Sobel(img,cv2.CV_8U,1,0,ksize=5)
 
 # Output dtype = cv2.CV_64F. Then take its absolute and convert to cv2.CV_8U
 sobelx64f = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)
-print(type(sobelx64f))
+print(sobelx64f.shape)
 abs_sobel64f = np.absolute(sobelx64f)
 sobel_8u = np.uint8(abs_sobel64f)
 
