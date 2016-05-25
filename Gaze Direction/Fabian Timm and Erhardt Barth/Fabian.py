@@ -13,9 +13,7 @@ video_capture = cam
 #extract eye image
 
 faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
-faceCascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_profileface.xml')
 eyecascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
-eyecascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_eye_tree_eyeglasses.xml')
 
 while True:
     # Capture frame-by-frame
@@ -24,46 +22,25 @@ while True:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
-		faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
+		
 		# Draw a rectangle around the faces
-		flag = 0
 		for (x, y, w, h) in faces1:
 		    eyes1 = eyecascade1.detectMultiScale(gray, 1.5, 6)
-		    eyes2 = eyecascade2.detectMultiScale(gray, 1.5, 6)
 		    for (x1, y1, w1, h1 ) in eyes1:
 				split = frame[y1:y1+h1,x1:x1+w1]
-				flag = 1
-
-		    if flag == 0:
-		        for (x2, y2, w2, h2 ) in eyes2:
-					split = frame[y2:y2+h2,x2:x2+w2]
-					flag = 1
-
-		if flag == 0:
-			for (x, y, w, h) in faces2:
-				eyes1 = eyecascade1.detectMultiScale(gray, 1.7, 6)
-				eyes2 = eyecascade2.detectMultiScale(gray, 1.7, 6)
-				for (x1, y1, w1, h1 ) in eyes1:
-					flag = 1
-					split = frame[y1:y1+h1, x1:x1+w1]
-
-					if flag == 0 :
-						for (x2, y2, w2, h2 ) in eyes2:
-							split = frame[y2:y2+h2,x2:x2+w2]
-							flag = 1
-		if flag ==1 :
-			split
-			minin = 1000000
-			minj=0
-			mini=0
-			for i in range(split.shape[0]):
-				for j in range(split.shape[1]):
-					if (split[i][j]<minin):
-						minin=gray[i][j]
-						mini=i
-						minj=j
-						print(mini,minj)
-
+				split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
+				minin = 1000000
+				minj=0
+				mini=0
+				for i in range(split1.shape[0]):
+					for j in range(split1.shape[1]):
+						if (split[i][j]<minin):
+							minin=gray[i][j]
+							mini=i
+							minj=j
+							print(mini,minj)
+				cv2.circle(frame,(x1+mini,y1+minj),4,(0,0,255))
+		
 		cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
