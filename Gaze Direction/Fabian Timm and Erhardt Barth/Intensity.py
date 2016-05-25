@@ -14,5 +14,5 @@ for i in range(gray.shape[0]):
 			mini=i
 			minj=j
 
-cv2.circle(img,[mini,minj],3)
+cv2.circle(img,[mini,minj],3,(0,0,255))
 cv2.imwrite('../Result_Images/eye2.jpg', img);
