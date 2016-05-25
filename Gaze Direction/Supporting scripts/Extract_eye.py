@@ -47,4 +47,4 @@ if flag == 0:
 					split = frame[y2:y2+h2,x2:x2+w2]
 					flag = 1
 if flag ==1 :
-	cv2.imwrite('Result_Images/eye1.jpg', split);
+	cv2.imwrite('../Result_Images/eye1.jpg', split);
