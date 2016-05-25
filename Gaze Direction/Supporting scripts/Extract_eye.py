@@ -3,12 +3,12 @@ import sys
 import numpy as np
 
 #import face cascades
-faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
-faceCascade2 = cv2.CascadeClassifier('haarcascades/haarcascade_profileface.xml')
-eyecascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
-eyecascade2 = cv2.CascadeClassifier('haarcascades/haarcascade_eye_tree_eyeglasses.xml')
+faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
+faceCascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_profileface.xml')
+eyecascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
+eyecascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_eye_tree_eyeglasses.xml')
 
-frame = cv2.imread('Test_Images/Test3.jpg')
+frame = cv2.imread('../Test_Images/Test2.jpg')
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
@@ -47,4 +47,4 @@ if flag == 0:
 					split = frame[y2:y2+h2,x2:x2+w2]
 					flag = 1
 if flag ==1 :
-	cv2.imwrite('Result_Images/eye.jpg', split);
+	cv2.imwrite('../Result_Images/eye1.jpg', split);
