@@ -1,5 +1,7 @@
 #Done by intensity.py
 
+#Poor accuracy
+
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -32,7 +34,7 @@ while True:
 				mini=0
 				for i in range(split1.shape[0]):
 					for j in range(split1.shape[1]):
-						if (split[i][j]<minin):
+						if (split1[i][j]<minin):
 							minin=gray[i][j]
 							mini=i
 							minj=j
