@@ -22,6 +22,7 @@ while True:
     ret, frame = video_capture.read()
     if ret:
 
+    	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
 		faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
 		# Draw a rectangle around the faces
