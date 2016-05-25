@@ -50,18 +50,22 @@ while True:
 						for (x2, y2, w2, h2 ) in eyes2:
 							split = frame[y2:y2+h2,x2:x2+w2]
 							flag = 1
-if flag ==1 :
-	split
-	minin = 1000000
-	minj=0
-	mini=0
-	for i in range(gray.shape[0]):
-		for j in range(gray.shape[1]):
-			if (gray[i][j]<minin):
-				minin=gray[i][j]
-				mini=i
-				minj=j
-				print(mini,minj)
+		if flag ==1 :
+			split
+			minin = 1000000
+			minj=0
+			mini=0
+			for i in range(split.shape[0]):
+				for j in range(split.shape[1]):
+					if (split[i][j]<minin):
+						minin=gray[i][j]
+						mini=i
+						minj=j
+						print(mini,minj)
 
-cv2.circle(img,(mini,minj),4,(0,0,255))
-cv2.imwrite('../Result_Images/eye2.jpg', img);
+		cv2.imshow('Video', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+# Release video capture
+video_capture.release()
+cv2.destroyAllWindows()
