@@ -32,12 +32,12 @@ while True:
 				sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)
 				sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)
 				sob = np.multiply(sobelx,sobely)
-				minin = 1000000
+				minin = -1
 				minj=0
 				mini=0
 				for i in range(len(sob)/2):
 					for j in range(len(sob)/2):
-						if(sob[i+len(sob)/4][j+len(sob)/4]<minin):
+						if(sob[i+len(sob)/4][j+len(sob)/4]>minin):
 							minin=gray[i][j]
 							mini=i
 							minj=j
