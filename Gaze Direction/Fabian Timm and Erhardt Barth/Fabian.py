@@ -29,17 +29,21 @@ while True:
 		    for (x1, y1, w1, h1 ) in eyes1:
 				split = frame[y1:y1+h1,x1:x1+w1]
 				split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
+				sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)
+				sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)
+				sob = np.multiply(sobelx,sobely)
 				minin = 1000000
 				minj=0
 				mini=0
-				for i in range(split1.shape[0]):
-					for j in range(split1.shape[1]):
-						if (split1[i][j]<minin):
+				for i in range(len(sob)/2):
+					for j in range(len(sob)/2):
+						if(sob[i+len(sob)/4][j+len(sob)/4]<minin):
 							minin=gray[i][j]
 							mini=i
 							minj=j
 							print(mini,minj)
-				cv2.circle(frame,(x1+mini,y1+minj),4,(0,0,255))
+				cv2.circle(frame,(x1+mini,y1+minj),4,(0,0,255))						
+
 		# Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
