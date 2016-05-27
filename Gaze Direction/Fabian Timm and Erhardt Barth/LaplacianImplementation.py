@@ -30,13 +30,13 @@ while True:
 				split = frame[y1:y1+h1,x1:x1+w1]
 				split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
 				laplacian = cv2.Laplacian(split1,cv2.CV_64F)
-				minin = -1
+				minin = 100000
 				minj=0
 				mini=0
 				print(laplacian.shape)
 				for i in range(len(laplacian)/2):
 					for j in range(len(laplacian)/2):
-						if(laplacian[int(i+len(laplacian)/4)][int(j+len(laplacian)/4)]>minin):
+						if(laplacian[int(i+len(laplacian)/4)][int(j+len(laplacian)/4)]<minin):
 							minin=gray[i][j]
 							mini=i
 							minj=j
