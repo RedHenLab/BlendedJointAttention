@@ -29,7 +29,7 @@ while True:
 		    for (x1, y1, w1, h1 ) in eyes1:
 				split = frame[y1:y1+h1,x1:x1+w1]
 				split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
-				laplacian = cv2.Laplacian(img,cv2.CV_64F)
+				laplacian = cv2.Laplacian(split1,cv2.CV_64F)
 				minin = -1
 				minj=0
 				mini=0
