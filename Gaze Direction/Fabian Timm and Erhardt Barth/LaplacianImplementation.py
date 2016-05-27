@@ -1,6 +1,6 @@
 #Done by Laplacian.py
 
-#Poor accuracy
+#Average accuracy
 
 import cv2
 import numpy as np
