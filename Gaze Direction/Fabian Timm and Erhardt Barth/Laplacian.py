@@ -10,6 +10,4 @@ plt.subplot(2,2,1),plt.imshow(img,cmap = 'gray')
 plt.title('Original'), plt.xticks([]), plt.yticks([])
 plt.subplot(2,2,2),plt.imshow(laplacian,cmap = 'gray')
 plt.title('Laplacian'), plt.xticks([]), plt.yticks([])
-plt.subplot(2,2,3),plt.imshow(sobelx,cmap = 'gray')
-
 plt.show()
