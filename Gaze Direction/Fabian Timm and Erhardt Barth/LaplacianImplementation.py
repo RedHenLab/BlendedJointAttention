@@ -1,6 +1,6 @@
-#Done by sobel.py
+#Done by Laplacian.py
 
-#Good accuracy
+#Average accuracy
 
 import cv2
 import numpy as np
@@ -29,16 +29,14 @@ while True:
 		    for (x1, y1, w1, h1 ) in eyes1:
 				split = frame[y1:y1+h1,x1:x1+w1]
 				split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
-				sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
-				sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
-				sob = np.multiply(sobelx,sobely)
+				laplacian = cv2.Laplacian(split1,cv2.CV_64F)
 				minin = 100000
 				minj=0
 				mini=0
-				print(sob.shape)
-				for i in range(len(sob)/2):
-					for j in range(len(sob)/2):
-						if(sob[int(i+len(sob)/4)][int(j+len(sob)/4)]<minin):
+				print(laplacian.shape)
+				for i in range(len(laplacian)/2):
+					for j in range(len(laplacian)/2):
+						if(laplacian[int(i+len(laplacian)/4)][int(j+len(laplacian)/4)]<minin):
 							minin=gray[i][j]
 							mini=i
 							minj=j

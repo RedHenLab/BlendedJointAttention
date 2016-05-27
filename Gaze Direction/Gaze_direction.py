@@ -1,6 +1,4 @@
-#Done by sobel.py
-
-#Good accuracy
+#Fabian implementation
 
 import cv2
 import numpy as np
@@ -14,8 +12,8 @@ video_capture = cam
 
 #extract eye image
 
-faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
-eyecascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
+faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
+eyecascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
 
 while True:
     # Capture frame-by-frame
@@ -43,8 +41,8 @@ while True:
 							mini=i
 							minj=j
 							print(mini,minj)
-				cv2.circle(frame,(x1+mini,y1+minj),4,(0,0,255))						
-
+				cv2.circle(frame,(x1+mini,y1+minj),1,(0,0,255))						
+				cv2.line(frame,(x1+mini,y1+minj), (x1+2*mini-w1/2,y1+2*minj-h1/2),(255,0,0))
 		# Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
