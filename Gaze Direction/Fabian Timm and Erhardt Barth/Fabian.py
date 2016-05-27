@@ -29,8 +29,8 @@ while True:
 		    for (x1, y1, w1, h1 ) in eyes1:
 				split = frame[y1:y1+h1,x1:x1+w1]
 				split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
-				sobelx = cv2.Sobel(img,cv2.CV_64F,1,0,ksize=5)
-				sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)
+				sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
+				sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
 				sob = np.multiply(sobelx,sobely)
 				minin = 100000
 				minj=0
