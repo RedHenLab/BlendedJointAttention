@@ -17,7 +17,7 @@ while True:
     	gray = cv2.Canny(gray,100,130)
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     	print(len(contours))
-    	cv2.drawContours(frame, contours, -1, (0,255,0), 3)
+    	cv2.drawContours(frame, contours, -1, (0,255,0), 1)
     	cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
