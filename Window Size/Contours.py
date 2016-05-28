@@ -14,7 +14,7 @@ while True:
     if ret:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    	gray = cv2.Canny(gray,100,180)
+    	gray = cv2.Canny(gray,100,130)
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     	print(len(contours))
     	cv2.drawContours(frame, contours, -1, (0,255,0), 3)
