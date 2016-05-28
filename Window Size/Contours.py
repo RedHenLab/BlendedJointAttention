@@ -14,9 +14,14 @@ while True:
     if ret:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    	# detect edges
     	gray = cv2.Canny(gray,100,130)
+
+    	# find contours
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     	print(len(contours))
+
+    	# print contours to frame
     	cv2.drawContours(frame, contours, -1, (0,255,0), 1)
     	cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
