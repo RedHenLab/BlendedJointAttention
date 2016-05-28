@@ -14,6 +14,7 @@ while True:
     if ret:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    	#detect edges via canny edge detecter
     	frame = cv2.Canny(gray,100,90)
 		cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
