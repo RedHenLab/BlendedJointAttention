@@ -15,7 +15,7 @@ while True:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     	frame = cv2.Canny(gray,100,100)
-    	cv2.imshow('Video', frame)
+		cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 # Release video capture
