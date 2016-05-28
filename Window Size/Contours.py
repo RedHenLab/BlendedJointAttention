@@ -22,7 +22,7 @@ while True:
     	print(len(contours))
 
     	# print contours to frame
-    	cv2.drawContours(frame, contours, -1, (0,255,0), 2)
+    	cv2.drawContours(frame, contours, -1, (0,0,255), 1)
     	cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
