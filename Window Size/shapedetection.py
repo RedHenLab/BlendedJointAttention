@@ -25,9 +25,13 @@ while True:
 	    	shape = "unidentified"
 	    	peri = cv2.arcLength(cont[i], True)
 	    	approx = cv2.approxPolyDP(cont[i], 0.04 * peri, True)
+	    	len(approx) == 4:
+			# compute the bounding box of the contour and use the
+			# bounding box to compute the aspect ratio
+			(x, y, w, h) = cv2.boundingRect(approx)
+			ar = w / float(h)
 
-    	print(approx)
-    	# print contours to frame
+	    # print contours to frame
     	cv2.drawContours(frame, contours, -1, (0,0,255), 1)
     	cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
