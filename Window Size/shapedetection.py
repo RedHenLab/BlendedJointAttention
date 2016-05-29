@@ -26,7 +26,7 @@ while True:
 	    	shape = "unidentified"
 	    	peri = cv2.arcLength(cont[i], True)
 	    	approx = cv2.approxPolyDP(cont[i], 0.04 * peri, True)
-	    	if (len(approx) == 4 ):
+	    	if (len(approx) == 4 and peri > 100):
 				rect_num=rect_num+1
 				cv2.drawContours(frame, cont, -1, (0,0,255), 1)
 		print(rect_num)
