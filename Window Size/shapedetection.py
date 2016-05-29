@@ -21,8 +21,8 @@ while True:
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
     	shape = "unidentified"
-		peri = cv2.arcLength(contours, True)
-		approx = cv2.approxPolyDP(contours, 0.04 * peri, True)
+    	peri = cv2.arcLength(contours, True)
+    	approx = cv2.approxPolyDP(contours, 0.04 * peri, True)
 		print(approx)
     	# print contours to frame
     	cv2.drawContours(frame, contours, -1, (0,0,255), 1)
