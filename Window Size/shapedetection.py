@@ -22,9 +22,9 @@ while True:
     	cont = np.asarray(contours)
     	print(type(cont))
     	shape = "unidentified"
-    	
-    	peri = cv2.arcLength(cont, True)
-    	approx = cv2.approxPolyDP(cont, 0.04 * peri, True)
+		for i in len(cont):    	
+	    	peri = cv2.arcLength(cont[i], True)
+	    	approx = cv2.approxPolyDP(cont[i], 0.04 * peri, True)
 
     	print(approx)
     	# print contours to frame
