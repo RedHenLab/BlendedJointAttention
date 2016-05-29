@@ -15,20 +15,22 @@ while True:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     	# detect edges
-    	gray = cv2.Canny(gray,100,130)
+    	gray = cv2.Canny(gray,100,300)
 
     	# find contours
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     	cont = np.asarray(contours)
-    	
+    	rect_num=0
     	for i in range(len(cont)):    	
+	    
 	    	shape = "unidentified"
 	    	peri = cv2.arcLength(cont[i], True)
 	    	approx = cv2.approxPolyDP(cont[i], 0.04 * peri, True)
-
-    	print(approx)
-    	# print contours to frame
-    	cv2.drawContours(frame, contours, -1, (0,0,255), 1)
+	    	if (len(approx) == 4 and peri > 100):
+				rect_num=rect_num+1
+				cv2.drawContours(frame, cont, -1, (0,0,255), 1)
+		print(rect_num)
+	    # print contours to frame
     	cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
