@@ -20,16 +20,14 @@ while True:
     	# find contours
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     	cont = np.asarray(contours)
-    	
+    	rect_num=0
     	for i in range(len(cont)):    	
+	    
 	    	shape = "unidentified"
 	    	peri = cv2.arcLength(cont[i], True)
 	    	approx = cv2.approxPolyDP(cont[i], 0.04 * peri, True)
-	    	len(approx) == 4:
-			# compute the bounding box of the contour and use the
-			# bounding box to compute the aspect ratio
-			(x, y, w, h) = cv2.boundingRect(approx)
-			ar = w / float(h)
+	    	if (len(approx) == 4):
+				rect_num=rect_num+1
 
 	    # print contours to frame
     	cv2.drawContours(frame, contours, -1, (0,0,255), 1)
