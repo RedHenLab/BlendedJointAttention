@@ -15,7 +15,7 @@ while True:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     	# detect edges
-    	gray = cv2.Canny(gray,100,130)
+    	gray = cv2.Canny(gray,100,200)
 
     	# find contours
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
@@ -26,7 +26,7 @@ while True:
 	    	shape = "unidentified"
 	    	peri = cv2.arcLength(cont[i], True)
 	    	approx = cv2.approxPolyDP(cont[i], 0.04 * peri, True)
-	    	if (len(approx) == 4):
+	    	if (len(approx) == 4 and peri>200):
 				rect_num=rect_num+1
 		print(rect_num)
 	    # print contours to frame
