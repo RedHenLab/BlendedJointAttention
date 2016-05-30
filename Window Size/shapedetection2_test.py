@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('/Test_Images/cube.jpg',0)
-ret,thresh = cv2.threshold(img,127,255,0)
+img = cv2.imread('Test_Images/Cube.jpg', 0)
+ret,thresh, ret = cv2.threshold(img,127,255,0)
 contours,hierarchy = cv2.findContours(thresh, 1, 2)
 
 cnt = contours[0]
