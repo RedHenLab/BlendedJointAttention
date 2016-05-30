@@ -5,7 +5,8 @@ img = cv2.imread('Test_Images/News.jpg')
 img1 = img
 
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-ret,thresh = cv2.threshold(img,127,255,0)
+img = cv2.Canny(img,100,100)
+# ret,thresh = cv2.threshold(img,127,255,0)
 _, contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
 rect = 0
