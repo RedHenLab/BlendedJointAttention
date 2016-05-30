@@ -20,3 +20,5 @@ for i in range(len(contours)):
 		approx = cv2.approxPolyDP(cnt,epsilon,True)
 		if(len(approx)==4):
 			cv2.drawContours(img1, contours[i], -1, (0,0,255), 1)
+
+cv2.imwrite('Result_Images/Cube.jpg', img1)
