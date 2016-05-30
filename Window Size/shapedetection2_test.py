@@ -8,6 +8,7 @@ img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret,thresh = cv2.threshold(img,127,255,0)
 _, contours,hierarchy = cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
+rect = 0
 for i in range(len(contours)):
 	cnt = contours[i]
 	M = cv2.moments(cnt)
@@ -21,6 +22,8 @@ for i in range(len(contours)):
 		epsilon = 0.1*cv2.arcLength(cnt,True)
 		approx = cv2.approxPolyDP(cnt,epsilon,True)
 		if(len(approx)==4):
+			rect = rect + 1
 			cv2.drawContours(img1, contours[i], -1, (0,0,255), 2)
 
+print(rect)
 cv2.imwrite('Result_Images/News.jpg', img1)
