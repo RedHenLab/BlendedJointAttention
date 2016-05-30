@@ -15,7 +15,7 @@ while True:
 
     	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     	# detect edges
-    	gray = cv2.Canny(gray,100,300)
+    	gray = cv2.Canny(gray,100,100)
 
     	# find contours
     	_, contours,_ = cv2.findContours(gray,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
