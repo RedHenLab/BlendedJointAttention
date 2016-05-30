@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('Test_Images/Cube.jpg')
+img = cv2.imread('Test_Images/News.jpg')
 img1 = img
 
 img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -23,4 +23,4 @@ for i in range(len(contours)):
 		if(len(approx)==4):
 			cv2.drawContours(img1, contours[i], -1, (0,0,255), 2)
 
-cv2.imwrite('Result_Images/Cube.jpg', img1)
+cv2.imwrite('Result_Images/News.jpg', img1)
