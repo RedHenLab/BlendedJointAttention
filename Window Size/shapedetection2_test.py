@@ -19,4 +19,4 @@ for i in range(len(contours)):
 		epsilon = 0.1*cv2.arcLength(cnt,True)
 		approx = cv2.approxPolyDP(cnt,epsilon,True)
 		if(len(approx)==4):
-			cv2.drawContours(frame, cont[i], -1, (0,0,255), 1)
+			cv2.drawContours(img1, contours[i], -1, (0,0,255), 1)
