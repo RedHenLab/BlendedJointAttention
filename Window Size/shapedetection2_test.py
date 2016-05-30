@@ -10,11 +10,12 @@ for i in range(len(contours)):
 	M = cv2.moments(cnt)
 	# print M
 	
-	cx = int(M['m10']/M['m00'])
-	cy = int(M['m01']/M['m00'])
+	if(M['m00']!=0):
+		cx = int(M['m10']/M['m00'])
+		cy = int(M['m01']/M['m00'])
 
 
-	epsilon = 0.1*cv2.arcLength(cnt,True)
-	approx = cv2.approxPolyDP(cnt,epsilon,True)
+		epsilon = 0.1*cv2.arcLength(cnt,True)
+		approx = cv2.approxPolyDP(cnt,epsilon,True)
 
 	print len(approx)
