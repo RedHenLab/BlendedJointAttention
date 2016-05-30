@@ -17,5 +17,4 @@ for i in range(len(contours)):
 
 		epsilon = 0.1*cv2.arcLength(cnt,True)
 		approx = cv2.approxPolyDP(cnt,epsilon,True)
-
-	print len(approx)
+		print len(approx)
