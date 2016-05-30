@@ -11,3 +11,7 @@ print M
 
 cx = int(M['m10']/M['m00'])
 cy = int(M['m01']/M['m00'])
+
+epsilon = 0.1*cv2.arcLength(cnt,True)
+approx = cv2.approxPolyDP(cnt,epsilon,True)
+
