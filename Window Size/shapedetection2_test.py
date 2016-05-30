@@ -5,7 +5,7 @@ img = cv2.imread('Test_Images/Cube.jpg', 0)
 ret,thresh = cv2.threshold(img,127,255,0)
 _, contours,hierarchy = cv2.findContours(thresh, 1, 2)
 
-for i in len(coutours):
+for i in len(contours):
 	cnt = contours[i]
 	M = cv2.moments(cnt)
 	# print M
