@@ -10,7 +10,8 @@ cam = cv2.VideoCapture(-1)
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
-
+a = list()
+b = list()
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
@@ -26,7 +27,11 @@ while True:
             nose = nosecascade.detectMultiScale(roi_gray,1.3,5)
             for (ex,ey,ew,eh) in nose:
                cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,0,0),2)
+               a.append(ex+ew/2)
+               b.append(ey+eh/2)
         # Display the resulting frame
+        for i in range(len(a)):
+            cv2.circle(frame, (a[i],b[i]),1,(0,0,255),2)
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
