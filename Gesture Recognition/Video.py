@@ -23,7 +23,7 @@ while True:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
-            nose = nosecascade1.detectMultiScale(gray, 1.5, 6)
+            nose = nosecascade1.detectMultiScale(roi_gray, 1.5, 6)
             for (x1, y1, w1, h1 ) in nose1:
                 cv2.rectangle(frame, (x1, y1), (x1+w1, y1+h1), (0, 0, 255), 2)
         # Display the resulting frame
