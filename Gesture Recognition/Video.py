@@ -3,6 +3,7 @@ import sys
 
 # Defining cascade variables
 faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
+nosecascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_mcs_nose.xml')
 
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
@@ -22,7 +23,8 @@ while True:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
-        
+            nose = nosecascade1.detectMultiScale(gray, 1.5, 6)
+
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
