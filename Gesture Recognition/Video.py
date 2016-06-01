@@ -31,7 +31,7 @@ while True:
                b.append(ey+eh/2)
         # Display the resulting frame
         for i in range(len(a)):
-            cv2.circle(frame, (a[i],b[i]),1,(0,0,255),2)
+            cv2.circle(frame, (x+a[i],y+b[i]),1,(128,0,127),2)
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
