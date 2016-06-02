@@ -20,7 +20,7 @@ Sub-repositories:
 
 ----------------------------------------
 
-Required Packeges:
+Required Packages:
 
 <ol>
 	<li> Python 2.7.x
