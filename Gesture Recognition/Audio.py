@@ -26,9 +26,10 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
                     word = word.replace(char, '')
                 # Convert to lowercase
                 word = word.lower()
-                ws.append(word)
-                time_start.append(annotation[0])
-                time_end.append(annotation[1])
+                if(word == 'yes'):
+                    ws.append(word)
+                    time_start.append(annotation[0])
+                    time_end.append(annotation[1])
 # print(time_start)
 with open(output_file, 'w') as output_file:
     # Loop throught the words with their frequencies, we do this sorted because
