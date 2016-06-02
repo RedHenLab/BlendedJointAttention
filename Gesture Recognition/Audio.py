@@ -6,7 +6,7 @@ import string   # Import string to get the punctuation data
 corpus_root = 'Test_EAF/'
 corpus_root1 = 'Result_files'
 print glob.glob("Result_files/*")
-output_file = '{}/annotation_with_timestamp.txt'.format(corpus_root1)
+output_file = '{}/speech_gesture_this.txt'.format(corpus_root1)
 ws = list()
 time_start = list()
 time_end = list()
@@ -26,7 +26,7 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
                     word = word.replace(char, '')
                 # Convert to lowercase
                 word = word.lower()
-                if(word == 'yes'):
+                if(word == 'this'):
                     ws.append(word)
                     time_start.append(annotation[0])
                     time_end.append(annotation[1])
