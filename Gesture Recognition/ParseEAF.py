@@ -7,6 +7,9 @@ corpus_root = 'Test_EAF/'
 corpus_root1 = 'Result_files'
 print glob.glob("Result_files/*")
 output_file = '{}/annotation_with_timestamp.txt'.format(corpus_root1)
+words = {}
+time_start = {}
+time_end = {}
 for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
     # Initialize the elan file
     eafob = pympi.Elan.Eaf(file_path)
@@ -23,9 +26,10 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
                     # Convert to lowercase
                     word = word.lower()
 
-# with open(output_file, 'w') as output_file:
-#     # Loop throught the words with their frequencies, we do this sorted because
-#     # the file will then be more easily searchable
-#     for word, frequency in sorted(frequency_dict.items()):
-#         # We write the output separated by tabs
-#         output_file.write('{}\t{}\n'.format(word, frequency))
+
+with open(output_file, 'w') as output_file:
+    # Loop throught the words with their frequencies, we do this sorted because
+    # the file will then be more easily searchable
+    for word, frequency in sorted(frequency_dict.items()):
+        # We write the output separated by tabs
+        output_file.write('{}\t{}\n'.format(word, frequency))
