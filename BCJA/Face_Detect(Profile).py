@@ -2,10 +2,8 @@ import cv2
 import sys
 
 # Defining cascade variables
-faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
-faceCascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
-faceCascade3 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt.xml')
-
+faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_profileface.xml')
+faceCascade2 = cv2.CascadeClassifier('lbp_cascades/lbpcascade_profileface.xml')
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
@@ -20,7 +18,6 @@ while True:
 
         faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
         faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
-        faces3 = faceCascade3.detectMultiScale(gray, 1.1, 5)
         # Draw a rectangle around the faces
         for (x, y, w, h) in faces1:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
@@ -28,10 +25,6 @@ while True:
             roi_color = frame[y:y+h, x:x+w]
         for (x, y, w, h) in faces2:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
-            roi_gray = gray[y:y+h, x:x+w]
-            roi_color = frame[y:y+h, x:x+w]
-        for (x, y, w, h) in faces3:
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (127, 128, 0), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
         # Display the resulting frame

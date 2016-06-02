@@ -14,8 +14,8 @@ video_capture = cam
 
 #extract eye image
 
-faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
-eyecascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
+faceCascade1 = cv2.CascadeClassifier('../../haarcascades/haarcascade_frontalface_alt2.xml')
+eyecascade1 = cv2.CascadeClassifier('../../haarcascades/haarcascade_eye.xml')
 
 while True:
     # Capture frame-by-frame

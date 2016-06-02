@@ -7,11 +7,16 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 Sub-repositories:
 
-1. Face detection : Detection of number of human faces, possible extensions to their position and orientation
-2. Emotion recognition : Recognising different emotions (sad, happy, surprised, neutral etc.) using a CNN classifier
-3. Gaze direction recognition : Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.
-4. Age detection : Categorising a person's age via facial features (outputs a range of possible age values)
-5. Facial Landmark detection : Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition. 
+<ol>
+<li> Face detection : Detection of number of human faces, possible extensions to their position and orientation</li>
+<li> Emotion recognition : Recognising different emotions (sad, happy, surprised, neutral etc.) using a CNN classifier</li>
+<li> Gaze direction recognition : Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.</li>
+<li> Age detection : Categorising a person's age via facial features (outputs a range of possible age values)</li>
+<li> Facial Landmark detection : Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.</li> 
+<li> Blended CLassic Joint attention : Detectiong instances of BCJA from instances without BCJA </li>
+<li> Reaction Shots : Analyse reaction shots (of surprise, awe etc.) </li>
+<li> Gesture Recognition : Recognising multimodal gestures </li>
+</ol>
 
 ----------------------------------------
 
@@ -27,6 +32,7 @@ Required Packeges:
 	</li>
 <li> OpenCV (One must check compatibility with python and OS) </li>
 <li> DLib </li>
+<li> pympi-ling </li>
 </ol>
 
 -----------------------------------------

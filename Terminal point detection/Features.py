@@ -1,8 +1,8 @@
 import cv2
 import sys
 
-faceCascade = cv2.CascadeClassifier('/home/soumitra/opencv/data/haarcascades/haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('/home/soumitra/opencv/data/haarcascades/haarcascade_eye.xml')
+faceCascade = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
 cam.set(4,480)

@@ -2,8 +2,8 @@ import cv2
 import sys
 
 # Defining cascade variables
-faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
-nosecascade = cv2.CascadeClassifier('haarcascades/haarcascade_mcs_nose.xml')
+faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
+nosecascade = cv2.CascadeClassifier('../haarcascades/haarcascade_mcs_nose.xml')
 
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
