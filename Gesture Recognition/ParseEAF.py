@@ -35,5 +35,5 @@ with open(output_file, 'w') as output_file:
     # the file will then be more easily searchable
     for i in range(len(ws)):
         # We write the output separated by tabs
-		output_file.write('{}\t{}\t{}\n'.format(ws[i], time_start[i], time_end[i]))
+		output_file.write('{}\t{}\t{}\n'.format(time_start[i], time_end[i], ws[i]))
 		
