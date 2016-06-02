@@ -32,6 +32,7 @@ Required Packeges:
 	</li>
 <li> OpenCV (One must check compatibility with python and OS) </li>
 <li> DLib </li>
+<li> pympi-ling </li>
 </ol>
 
 -----------------------------------------
