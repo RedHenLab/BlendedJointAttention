@@ -29,10 +29,10 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
 			    ws.append(word)
 			    time_start.append(annotation[0])
 			    time_end.append(annotation[1])
-print(time_start)
-# with open(output_file, 'w') as output_file:
-#     # Loop throught the words with their frequencies, we do this sorted because
-#     # the file will then be more easily searchable
-#     for i in range(len(ws)):
-#         # We write the output separated by tabs
-#         output_file.write('{}\t{}\t{}\n'.format(ws[i], time_start[i], time_end[i])
+# print(time_start)
+with open(output_file, 'w') as output_file:
+    # Loop throught the words with their frequencies, we do this sorted because
+    # the file will then be more easily searchable
+    for i in range(len(ws)):
+        # We write the output separated by tabs
+        output_file.write('{}\t{}\t{}\n'.format(ws[i], time_start[i], time_end[i])
