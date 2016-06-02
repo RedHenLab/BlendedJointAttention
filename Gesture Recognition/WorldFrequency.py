@@ -9,7 +9,7 @@ import string   # Import string to get the punctuation data
 # Define some variables for later use
 corpus_root = '/Test_EAF/'
 corpus_root1 = '/Result_files/'
-output_file = '{}/word_frequencies.txt'.format(corpus_root)
+output_file = '{}word_frequencies.txt'.format(corpus_root1)
 ort_tier_names = ['spkA', 'spkB', 'spkC']
 
 # Initialize the frequency dictionary
