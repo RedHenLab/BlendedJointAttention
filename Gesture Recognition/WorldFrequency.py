@@ -34,8 +34,10 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
             for annotation in eafob.get_annotation_data_for_tier(ort_tier):
                 # We are only interested in the utterance
                 utterance = annotation[2]
+
                 # Split, by default, splits on whitespace thus separating words
                 words = utterance.split()
+                print(words)
                 # For every word increment the frequency
                 for word in words:
                     # Remove the possible punctuation
