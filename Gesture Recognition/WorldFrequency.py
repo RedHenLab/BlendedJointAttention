@@ -7,7 +7,8 @@ import pympi    # Import pympi to work with elan files
 import string   # Import string to get the punctuation data
 
 # Define some variables for later use
-corpus_root = '/home/frobnicator/corpora/corpus_1'
+corpus_root = '/Test_EAF/'
+corpus_root1 = '/Result_files/'
 output_file = '{}/word_frequencies.txt'.format(corpus_root)
 ort_tier_names = ['spkA', 'spkB', 'spkC']
 
@@ -15,7 +16,7 @@ ort_tier_names = ['spkA', 'spkB', 'spkC']
 frequency_dict = {}
 
 # Loop over all elan files the corpusroot subdirectory called eaf
-for file_path in glob.glob('{}/eaf/*.eaf'.format(corpus_root)):
+for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
     # Initialize the elan file
     eafob = pympi.Elan.Eaf(file_path)
     # Loop over all the defined tiers that contain orthography
