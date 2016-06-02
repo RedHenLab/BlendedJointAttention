@@ -10,7 +10,19 @@ output_file = '{}/annotation_with_timestamp.txt'.format(corpus_root1)
 for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
     # Initialize the elan file
     eafob = pympi.Elan.Eaf(file_path)
-   	
+    ort_tier_names = eafob.get_tier_names()
+    for ort_tier in ort_tier_names:
+    	print(ort_tier)
+    	for annotation in eafob.get_annotation_data_for_tier(ort_tier):
+    		utterance = annotation[2]
+    		 words = utterance.split()
+    		 for word in words:
+                    # Remove the possible punctuation
+                    for char in string.punctuation:
+                        word = word.replace(char, '')
+                    # Convert to lowercase
+                    word = word.lower()
+
 # with open(output_file, 'w') as output_file:
 #     # Loop throught the words with their frequencies, we do this sorted because
 #     # the file will then be more easily searchable
