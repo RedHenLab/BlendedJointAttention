@@ -13,9 +13,9 @@ Sub-repositories:
 <li> Gaze direction recognition : Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.</li>
 <li> Age detection : Categorising a person's age via facial features (outputs a range of possible age values)</li>
 <li> Facial Landmark detection : Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.</li> 
-<li></li>
-<li></li>
-<li></li>
+<li> Blended CLassic Joint attention : Detectiong instances of BCJA from instances without BCJA </li>
+<li> Reaction Shots : Analyse reaction shots (of surprise, awe etc.) </li>
+<li> Gesture Recognition : Recognising multimodal gestures </li>
 </ol>
 
 ----------------------------------------
