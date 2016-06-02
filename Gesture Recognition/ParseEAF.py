@@ -18,16 +18,16 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
     	print(ort_tier)
     	for annotation in eafob.get_annotation_data_for_tier(ort_tier):
     		utterance = annotation[2]
-    		 words = utterance.split()
-    		 for word in words:
-                    # Remove the possible punctuation
-                    for char in string.punctuation:
-                        word = word.replace(char, '')
-                    # Convert to lowercase
-                    word = word.lower()
-                    ws.append(word)
-                    time_start.append(annotation[0])
-                    time_end.append(annotation[1])
+			words = utterance.split()
+			for word in words:
+			    # Remove the possible punctuation
+			    for char in string.punctuation:
+			        word = word.replace(char, '')
+			    # Convert to lowercase
+			    word = word.lower()
+			    ws.append(word)
+			    time_start.append(annotation[0])
+			    time_end.append(annotation[1])
 
 with open(output_file, 'w') as output_file:
     # Loop throught the words with their frequencies, we do this sorted because
