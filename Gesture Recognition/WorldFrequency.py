@@ -21,7 +21,7 @@ for file_path in glob.glob('{}/*.eaf'.format(corpus_root)):
     eafob = pympi.Elan.Eaf(file_path)
     # print(eafob.get_tier_names())
     # Loop over all the defined tiers that contain orthography
-    ort_tier_names = [eafob.get_tier_names()]
+    ort_tier_names = eafob.get_tier_names()
     for ort_tier in ort_tier_names:
         # If the tier is not present in the elan file spew an error and
         # continue. This is done to avoid possible KeyErrors
