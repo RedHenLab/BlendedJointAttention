@@ -18,19 +18,13 @@ while True:
 		predictor = dlib.shape_predictor(predictor_path)
 		win = dlib.image_window()
 		dets = detector(frame, 1)
-	    for k, d in enumerate(dets):
-	        print("Detection {}: Left: {} Top: {} Right: {} Bottom: {}".format(
-	            k, d.left(), d.top(), d.right(), d.bottom()))
-	        # Get the landmarks/parts for the face in box d.
-	        shape = predictor(img, d)
-	        print("Part 0: {}, Part 1: {} ...".format(shape.part(0),
-	                                                  shape.part(1)))
-	        # Draw the face landmarks on the screen.
-	        win.add_overlay(shape)
+		for k, d in enumerate(dets):
+			shape = predictor(img, d)
+	        print(shape)
         # Display the resulting frame
-        cv2.imshow('Video', frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+		cv2.imshow('Video', frame)
+		if cv2.waitKey(1) & 0xFF == ord('q'):
+			break
 # Release video capture
 video_capture.release()
 cv2.destroyAllWindows()
