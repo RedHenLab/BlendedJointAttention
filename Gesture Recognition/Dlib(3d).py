@@ -64,8 +64,7 @@ while True:
 	    for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 	        shape = predictor(frame, d)
-	        print(shape)
-		
+			frame = cv2.drawKeypoints(frame , shape, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 		cv2.imshow('Video', frame)
 	    if cv2.waitKey(1) & 0xFF == ord('q'):
 		    break
