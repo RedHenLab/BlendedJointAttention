@@ -18,9 +18,6 @@ while True:
 	    win.clear_overlay()
 	    win.set_image(frame)
 
-	    # Ask the detector to find the bounding boxes of each face. The 1 in the
-	    # second argument indicates that we should upsample the image 1 time. This
-	    # will make everything bigger and allow us to detect more faces.
 	    dets = detector(frame, 1)
 	    for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
