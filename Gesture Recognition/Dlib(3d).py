@@ -45,8 +45,7 @@
 import sys
 import os
 import dlib
-import glob
-from skimage import io
+import cv2
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
