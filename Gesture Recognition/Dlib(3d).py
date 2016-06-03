@@ -46,6 +46,7 @@ import sys
 import os
 import dlib
 import cv2
+import numpy as np
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
@@ -59,15 +60,14 @@ video_capture = cam
 while True:
     ret, frame = video_capture.read()
     if ret:
-	    
-	    dets = detector(frame, 1)
+		dets = detector(frame, 1)
 		for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 			shape = predictor(frame, d)
 			frame = cv2.drawKeypoints(frame , shape, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 		
 		cv2.imshow('Video', frame)
-	    if cv2.waitKey(1) & 0xFF == ord('q'):
+		if cv2.waitKey(1) & 0xFF == ord('q'):
 		    break
 # Release video capture
 video_capture.release()
