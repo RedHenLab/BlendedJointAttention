@@ -15,7 +15,7 @@ while True:
     ret, frame = video_capture.read()
     if ret:
 		detector = dlib.get_frontal_face_detector()
-		predictor = dlib.shape_predictor(predictor_path)
+		predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
 		win = dlib.image_window()
 		dets = detector(frame, 1)
 		for k, d in enumerate(dets):
