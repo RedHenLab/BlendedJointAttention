@@ -59,19 +59,15 @@ video_capture = cam
 while True:
     ret, frame = video_capture.read()
     if ret:
-	    win.clear_overlay()
-	    win.set_image(frame)
-
+	    
 	    dets = detector(frame, 1)
 	    for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 	        shape = predictor(frame, d)
-	        win.add_overlay(shape)
-
-	    win.add_overlay(dets)
-		dlib.hit_enter_to_continue()
+	        print(shape)
+		
 		cv2.imshow('Video', frame)
-		if cv2.waitKey(1) & 0xFF == ord('q'):
+	    if cv2.waitKey(1) & 0xFF == ord('q'):
 		    break
 # Release video capture
 video_capture.release()
