@@ -7,7 +7,7 @@ detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
 win = dlib.image_window()
 
-cam = cv2.VideoCapture("/Test_EAF/2014-10-13_1800_US_CNN_Newsroom_12-493.mp4")
+cam = cv2.VideoCapture("Test_EAF/2014-10-13_1800_US_CNN_Newsroom_12-493.mp4")
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
