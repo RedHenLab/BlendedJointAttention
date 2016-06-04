@@ -53,10 +53,10 @@ while True:
                 last_w = w
                 flag = 1
 
-        # if flag == 0 :
-        #     # Apply template Matching
-        #     res = cv2.matchTemplate(img,template,method)
-        #     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+        if flag == 0 :
+            # Apply template Matching
+            res = cv2.matchTemplate(img,template,method)
+            min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
 
         # Display the resulting frame
         cv2.imshow('Video', frame)
