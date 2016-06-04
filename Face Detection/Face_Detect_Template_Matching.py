@@ -59,11 +59,11 @@ while True:
         if flag == 0 and frame_number != 0:
             # Apply template Matching
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            res = cv2.matchTemplate(gray,template,'cv2.TM_CCOEFF')
+            res = cv2.matchTemplate(gray,template,cv2.TM_CCOEFF)
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
             top_left = max_loc
             bottom_right = (top_left[0] + last_w, top_left[1] + last_h)
-            cv2.rectangle(img,top_left, bottom_right, (0,255,0), 2)
+            cv2.rectangle(frame,top_left, bottom_right, (0,255,0), 2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
