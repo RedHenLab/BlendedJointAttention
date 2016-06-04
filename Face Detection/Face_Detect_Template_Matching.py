@@ -13,12 +13,13 @@ cam.set(4,480)
 video_capture = cam
 
 frame_number = 0
-
+flag = 0
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
     frame_number=frame_number+1
     if (ret and frame_number==1):
+        
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
@@ -29,14 +30,17 @@ while True:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
+            flag = 1
         for (x, y, w, h) in faces2:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
+            flag = 1
         for (x, y, w, h) in faces3:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (127, 128, 0), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
+            flag = 1
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
