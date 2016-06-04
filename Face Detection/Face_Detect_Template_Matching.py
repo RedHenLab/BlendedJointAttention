@@ -60,8 +60,7 @@ while True:
 
         if flag == 0 and frame_number != 0:
             # Apply template Matching
-            gray = cv2.cvtColor(roi_gray2, cv2.COLOR_BGR2GRAY)
-            res = cv2.matchTemplate(gray,template,cv2.TM_CCOEFF)
+            res = cv2.matchTemplate(roi_gray2,template,cv2.TM_CCOEFF)
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
             top_left = max_loc
             bottom_right = (top_left[0] + last_w, top_left[1] + last_h)
