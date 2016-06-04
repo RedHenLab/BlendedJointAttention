@@ -12,6 +12,9 @@ video_capture = cam
 
 frame_number = 0
 flag = 0
+last_x = 0
+last_y = 0
+
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
