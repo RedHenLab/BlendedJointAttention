@@ -15,11 +15,15 @@ video_capture = cam
 while True:
     ret, frame = video_capture.read()
     if ret:
-	    win.clear_overlay()
-	    win.set_image(frame)
+	    # win.clear_overlay()
+	    # win.set_image(frame)
 
 	    dets = detector(frame, 1)
 	    for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 	        shape = predictor(frame, d)
-	        win.add_overlay(shape)
+	        cv2.circle(frame,(shape.part(36),2,(0,0,255))
+	        cv2.circle(frame,(shape.part(36),4,(0,0,255))
+	        cv2.circle(frame,(shape.part(36),4,(0,0,255))
+	        cv2.circle(frame,(shape.part(36),4,(0,0,255))		
+	        # win.add_overlay(shape)
