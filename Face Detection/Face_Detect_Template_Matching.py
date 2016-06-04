@@ -20,7 +20,6 @@ last_h = 0
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
-    frame_number=frame_number+1
     if ret:
         if flag == 0:
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -36,6 +35,7 @@ while True:
                 last_h = h
                 last_w = w
                 flag = 1
+                frame_number=frame_number+1
 
         else :
             flag = 0
@@ -54,8 +54,9 @@ while True:
                 last_h = h
                 last_w = w
                 flag = 1
+                frame_number=frame_number+1
 
-        if flag == 0 :
+        if flag == 0 and frame_number != 0:
             # Apply template Matching
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             res = cv2.matchTemplate(gray,template,'cv2.TM_CCOEFF')
