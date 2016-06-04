@@ -37,20 +37,20 @@ while True:
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
 			sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
 			sob = np.multiply(sobelx,sobely)
-			minin = 100000
+			minin = 0
 			minj=0
 			mini=0
 			print(sob.shape)
 			for i in range(len(sob)/2):
 				for j in range(len(sob)/2):
-					if(sob[int(i+len(sob)/4)][int(j+len(sob)/4)]<minin):
+					if(sob[int(i+len(sob)/4)][int(j+len(sob)/4)]>minin):
 						minin=split1[i][j]
 						mini=i
 						minj=j
 						print(mini,minj)
 			
 			cv2.circle(frame,(x1+mini,y1+minj),1,(0,0,255))						
-			cv2.line(frame,(x1+mini,y1+minj), int((3*x1+4*mini-x2)/2),int((3*y1+4*minj-y2)/2),(255,0,0))
+			cv2.line(frame,(x1+mini,y1+minj), (int((3*x1+4*mini-x2)/2),int((3*y1+4*minj-y2)/2)),(255,0,0))
 		# Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
