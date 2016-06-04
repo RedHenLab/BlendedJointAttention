@@ -16,12 +16,12 @@ predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landma
 
 while True:
     # Capture frame-by-frame
-    ret, frame = video_capture.read()
-    if ret:
-    	dets = detector(frame, 1)
-    	for k, d in enumerate(dets):
+	ret, frame = video_capture.read()
+	if ret:
+		dets = detector(frame, 1)
+		for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
-	        shape = predictor(frame, d)
+			shape = predictor(frame, d)
 	        # print(type(shape.part(1).x))
 			cv2.circle(frame,(shape.part(36).x,shape.part(36).y),2,(0,0,255))
 			cv2.circle(frame,(shape.part(39).x,shape.part(39).y),2,(0,0,255))
