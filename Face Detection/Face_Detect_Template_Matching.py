@@ -30,6 +30,7 @@ while True:
                 template = gray[y:y+h, x:x+w]
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
                 roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
+                roi_gray2 = gray[(y-20):(y+h+20), (x-20):(x+w+20)]
                 last_x = x
                 last_y = y
                 last_h = h
@@ -48,6 +49,7 @@ while True:
                 y = last_y+y-10
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
                 roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
+                roi_gray2 = gray[(y-20):(y+h+20), (x-20):(x+w+20)]
                 template = gray[y:y+h, x:x+w]
                 last_x = x
                 last_y = y
@@ -58,7 +60,7 @@ while True:
 
         if flag == 0 and frame_number != 0:
             # Apply template Matching
-            res = cv2.matchTemplate(roi_gray,template,cv2.TM_CCOEFF)
+            res = cv2.matchTemplate(roi_gray2,template,cv2.TM_CCOEFF)
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
             top_left = max_loc
             bottom_right = (top_left[0] + last_w, top_left[1] + last_h)
