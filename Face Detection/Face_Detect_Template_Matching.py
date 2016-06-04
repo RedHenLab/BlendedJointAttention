@@ -24,7 +24,7 @@ while True:
             # Draw a rectangle around the faces
             for (x, y, w, h) in faces1:
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-                roi_gray = gray[y:y+h, x:x+w]
+                roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
                 roi_color = frame[y:y+h, x:x+w]
                 flag = 1
 
@@ -35,7 +35,7 @@ while True:
             # Draw a rectangle around the faces
             for (x, y, w, h) in faces1:
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-                roi_gray = gray[y:y+h, x:x+w]
+                roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
                 roi_color = frame[y:y+h, x:x+w]
                 flag = 1
             
