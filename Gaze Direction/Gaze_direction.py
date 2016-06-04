@@ -44,7 +44,7 @@ while True:
 			for i in range(len(sob)/2):
 				for j in range(len(sob)/2):
 					if(sob[int(i+len(sob)/4)][int(j+len(sob)/4)]<minin):
-						minin=gray[i][j]
+						minin=split1[i][j]
 						mini=i
 						minj=j
 						print(mini,minj)
