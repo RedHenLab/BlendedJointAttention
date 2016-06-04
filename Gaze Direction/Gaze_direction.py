@@ -39,14 +39,15 @@ while True:
 	        minin = 100000
 	        minj=0
 	        mini=0
-	        print(sob.shape)
-	        for i in range(len(sob)/2):
+			print(sob.shape)
+			for i in range(len(sob)/2):
 				for j in range(len(sob)/2):
 					if(sob[int(i+len(sob)/4)][int(j+len(sob)/4)]<minin):
 						minin=gray[i][j]
 						mini=i
 						minj=j
 						print(mini,minj)
+			
 			cv2.circle(frame,(x1+mini,y1+minj),1,(0,0,255))						
 			cv2.line(frame,(x1+mini,y1+minj), (3*x1+4*mini-x2)/2,(3*y1+4*minj-y2)/2,(255,0,0))
 		# Display the resulting frame
