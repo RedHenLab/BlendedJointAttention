@@ -64,6 +64,8 @@ while True:
             top_left = max_loc
             bottom_right = (top_left[0] + last_w, top_left[1] + last_h)
             cv2.rectangle(frame,top_left, bottom_right, (0,255,0), 2)
+            roi_gray = gray[top_left[1]-10:top_left[1]+last_h+10, top_left[0]-10:(top_left[0]+last_w+10)]
+            flag = 1
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
