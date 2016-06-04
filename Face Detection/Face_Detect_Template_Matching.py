@@ -63,6 +63,7 @@ while True:
             res = cv2.matchTemplate(roi_gray2,template,cv2.TM_CCOEFF)
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
             top_left = max_loc
+            top_left = (top_left[0]+last_x-10, top_left[1]+last_y-10)
             bottom_right = (top_left[0] + last_w, top_left[1] + last_h)
             cv2.rectangle(frame,top_left, bottom_right, (0,255,0), 2)
             roi_gray = gray[top_left[1]-10:top_left[1]+last_h+10, top_left[0]-10:(top_left[0]+last_w+10)]
