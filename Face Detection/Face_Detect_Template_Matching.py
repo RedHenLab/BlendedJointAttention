@@ -47,7 +47,12 @@ while True:
                 last_x = last_x + x-10
                 last_y = last_y + y-10
                 flag = 1
-            
+                
+        if flag == 0 :
+            # Apply template Matching
+            res = cv2.matchTemplate(img,template,method)
+            min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
