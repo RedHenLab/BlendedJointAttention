@@ -50,7 +50,7 @@ while True:
 						print(mini,minj)
 			
 			cv2.circle(frame,(x1+mini,y1+minj),1,(0,0,255))						
-			cv2.line(frame,(x1+mini,y1+minj), (3*x1+4*mini-x2)/2,(3*y1+4*minj-y2)/2,(255,0,0))
+			cv2.line(frame,(x1+mini,y1+minj), int((3*x1+4*mini-x2)/2),int((3*y1+4*minj-y2)/2),(255,0,0))
 		# Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
