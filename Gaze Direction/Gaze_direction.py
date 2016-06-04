@@ -23,14 +23,14 @@ while True:
 	        # Get the landmarks/parts for the face in box d.
 	        shape = predictor(frame, d)
 	        # print(type(shape.part(1).x))
-	        cv2.circle(frame,(shape.part(36).x,shape.part(36).y),2,(0,0,255))
-	        cv2.circle(frame,(shape.part(39).x,shape.part(39).y),2,(0,0,255))
-	        cv2.circle(frame,(shape.part(42).x,shape.part(42).y),2,(0,0,255))
-	        cv2.circle(frame,(shape.part(45).x,shape.part(45).y),2,(0,0,255))
-	        x1 = shape.part(36).x
-	        y1 = shape.part(37).y
-	        x2 = shape.part(39).x
-	        y2 = shape.part(39).y
+			cv2.circle(frame,(shape.part(36).x,shape.part(36).y),2,(0,0,255))
+			cv2.circle(frame,(shape.part(39).x,shape.part(39).y),2,(0,0,255))
+			cv2.circle(frame,(shape.part(42).x,shape.part(42).y),2,(0,0,255))
+			cv2.circle(frame,(shape.part(45).x,shape.part(45).y),2,(0,0,255))
+			x1 = shape.part(36).x
+			y1 = shape.part(37).y
+			x2 = shape.part(39).x
+			y2 = shape.part(39).y
 			split = frame[y1:y2,x1:x2]
 			split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
