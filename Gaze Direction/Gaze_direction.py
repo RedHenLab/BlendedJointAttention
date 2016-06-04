@@ -41,8 +41,8 @@ while True:
 			minj=0
 			mini=0
 			print(sob.shape)
-			for i in range(len(sob)/2):
-				for j in range(len(sob)/2):
+			for i in range(len(sob)):
+				for j in range(len(sob)):
 					if(sob[int(i+len(sob)/4)][int(j+len(sob)/4)]<minin):
 						minin=split1[i][j]
 						mini=i
