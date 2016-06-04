@@ -48,6 +48,7 @@ while True:
                 y = last_y+y-10
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
                 roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
+                template = gray[y:y+h, x:x+w]
                 last_x = x
                 last_y = y
                 last_h = h
@@ -60,8 +61,8 @@ while True:
             res = cv2.matchTemplate(gray,template,'cv2.TM_CCOEFF')
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
             top_left = max_loc
-            bottom_right = (top_left[0] + w, top_left[1] + h)
-            cv2.rectangle(img,top_left, bottom_right, 255, 2)
+            bottom_right = (top_left[0] + last_w, top_left[1] + last_h)
+            cv2.rectangle(img,top_left, bottom_right, (0,0,255), 2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
