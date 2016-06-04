@@ -33,6 +33,8 @@ while True:
                 roi_color = frame[y:y+h, x:x+w]
                 last_x = x
                 last_y = y
+                last_h = h
+                last_w = w
                 flag = 1
 
         else :
@@ -41,17 +43,21 @@ while True:
             
             # Draw a rectangle around the faces
             for (x, y, w, h) in faces1:
-                cv2.rectangle(frame, (last_x+x-10, last_y+y-10), (last_x+x+w+10, last_y+y+h+10), (0, 0, 255), 2)
+                x = last_x+x-10
+                y = last_y+y-10
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
                 roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
                 roi_color = frame[y:y+h, x:x+w]
-                last_x = last_x + x-10
-                last_y = last_y + y-10
+                last_x = x
+                last_y = y
+                last_h = h
+                last_w = w
                 flag = 1
-                
-        if flag == 0 :
-            # Apply template Matching
-            res = cv2.matchTemplate(img,template,method)
-            min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+
+        # if flag == 0 :
+        #     # Apply template Matching
+        #     res = cv2.matchTemplate(img,template,method)
+        #     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
 
         # Display the resulting frame
         cv2.imshow('Video', frame)
