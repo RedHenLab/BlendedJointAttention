@@ -28,6 +28,7 @@ while True:
             faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
             # Draw a rectangle around the faces
             for (x, y, w, h) in faces1:
+                template = gray[y:y+h, x:x+w]
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
                 roi_gray = gray[(y-10):(y+h+10), (x-10):(x+w+10)]
                 last_x = x
@@ -55,9 +56,12 @@ while True:
 
         if flag == 0 :
             # Apply template Matching
-            res = cv2.matchTemplate(img,template,method)
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            res = cv2.matchTemplate(gray,template,'cv2.TM_CCOEFF')
             min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
-
+            top_left = max_loc
+            bottom_right = (top_left[0] + w, top_left[1] + h)
+            cv2.rectangle(img,top_left, bottom_right, 255, 2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
