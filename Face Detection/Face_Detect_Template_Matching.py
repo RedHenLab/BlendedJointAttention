@@ -68,6 +68,7 @@ while True:
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+        print(frame_number)
 # Release video capture
 video_capture.release()
 cv2.destroyAllWindows()
