@@ -19,7 +19,7 @@ while True:
     ret, frame = video_capture.read()
     if ret:
     	dets = detector(frame, 1)
-	    for k, d in enumerate(dets):
+    	for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 	        shape = predictor(frame, d)
 	        # print(type(shape.part(1).x))
@@ -31,7 +31,7 @@ while True:
 	        y1 = shape.part(37).y
 	        x2 = shape.part(39).x
 	        y2 = shape.part(39).y
-			split = frame[y1:y2,x1:x2]
+	        split = frame[y1:y2,x1:x2]
 			split1=cv2.cvtColor(split, cv2.COLOR_BGR2GRAY)
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
 			sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
