@@ -1,7 +1,7 @@
 Belended Classic Joint Attention Repository
 ============================================
 
-<i> Pull requests from members other than that of Red Hen Labs would not be merged here. This is just a repository for temporary work. If you still believe that there is a threat to humanity which this repo may endure, you may send a mail to agarwalsoumitra1504[at]gmail[dot]com. If you wish to contribute to blended joint attention look at [this](https://github.com/RedHenLab/BlendedJointAttentionClean) repository.<i> 
+<i> Pull requests from members other than that of Red Hen Labs would not be merged here. This is just a repository for temporary work. If you still believe that there is a threat to humanity which this repo may endure, you may send a mail to agarwalsoumitra1504[at]gmail[dot]com. If you wish to contribute to blended joint attention look at [this](https://github.com/RedHenLab/BlendedJointAttentionClean) repository.</i> 
 
 This repository deals with work done by The Distibuted Red Hen Lab towards classification of different instances of blended classic joint attention in various form of print, audio and video media. For more information visit : https://sites.google.com/site/distributedlittleredhen/home/the-cognitive-core-research-topics-in-red-hen/the-barnyard/blended-classic-joint-attention
 
