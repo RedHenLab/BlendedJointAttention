@@ -25,16 +25,14 @@ Sub-repositories:
 Required Packages:
 
 <ol>
-	<li> Python 2.7.x
-	<ul>
-		<li> Numpy </li>
-		<li> Bob </li>
-		<li> Matplotlib </li>
-	</ul>
-	</li>
-<li> OpenCV (One must check compatibility with python and OS) </li>
-<li> DLib </li>
-<li> pympi-ling </li>
+	<li> Python 2.7.x </li>
+	<li> Numpy </li>
+	<li> Bob </li>
+	<li> Matplotlib </li>
+	<li> OpenCV (One must check compatibility with python and OS) </li>
+	<li> DLib </li>
+	<li> pympi-ling </li>
+	<li> PySceneDetect </li>
 </ol>
 
 -----------------------------------------
