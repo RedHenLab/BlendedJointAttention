@@ -7,8 +7,8 @@ nosecascade = cv2.CascadeClassifier('../haarcascades/haarcascade_mcs_nose.xml')
 
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
-cam.set(3,640)
-cam.set(4,480)
+cap.set(CV_CAP_PROP_FRAME_WIDTH, 640);
+cap.set(CV_CAP_PROP_FRAME_HEIGHT, 360);
 video_capture = cam
 a = list()
 b = list()
