@@ -18,3 +18,4 @@ scene_list_msec = [(1000.0 * x) / float(video_framerate) for x in scene_list]
 
 # create new list with scene boundaries in timecode strings ("HH:MM:SS.nnn").
 scene_list_tc = [scenedetect.timecodes.get_string(x) for x in scene_list_msec]
+print(scene_list_tc)
