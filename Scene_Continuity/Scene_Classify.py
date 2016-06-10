@@ -1,15 +1,14 @@
 import scenedetect
 
 scene_list = []        # Scenes will be added to this list in detect_scenes().
-path = 'my_video.mp4'  # Path to video file.
+path = 'test.mp4'  # Path to video file.
 
 # Usually use one detector, but multiple can be used.
 detector_list = [
     scenedetect.detectors.ThresholdDetector(threshold = 16, min_percent = 0.9)
 ]
 
-video_framerate, frames_read = scenedetect.detect_scenes_file(
-    path, scene_list, detector_list)
+video_framerate, frames_read = scenedetect.detect_scenes_file(path, scene_list, detector_list)
 
 # scene_list now contains the frame numbers of scene boundaries.
 print scene_list
