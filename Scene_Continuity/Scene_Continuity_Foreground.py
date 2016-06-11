@@ -13,7 +13,7 @@ while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
     if ret:
-    	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		gray = cv2.GaussianBlur(gray, (21, 21), 0)
 		if flag == 0:
     		flag = 1
