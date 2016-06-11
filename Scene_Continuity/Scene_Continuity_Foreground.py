@@ -15,14 +15,14 @@ while(1):
 	num_white = 0
 	if(frame_num-last_detected>20):
 		last_detected = frame_num
-	    for i in range(fgmask.shape[0]):
-	    	for j in range(fgmask.shape[1]):
-	    		if fgmask[i][j] == 255:
-	    			num_white = num_white+1
-	    			if(num_white>0.8*fgmask.shape[0]*fgmask.shape[0]):
-	    				scene_num = scene_num + 1
-	    				print("Scene changed : ", scene_num)
-	    				break
+		for i in range(fgmask.shape[0]):
+			for j in range(fgmask.shape[1]):
+				if fgmask[i][j] == 255:
+					num_white = num_white+1
+					if(num_white>0.8*fgmask.shape[0]*fgmask.shape[0]):
+						scene_num = scene_num + 1
+						print("Scene changed : ", scene_num)
+						break
 	cv2.imshow('Video',fgmask)
 	k = cv2.waitKey(30) & 0xff
 	if k == 27:
