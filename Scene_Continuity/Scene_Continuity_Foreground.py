@@ -6,6 +6,8 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 flag = 0
+backgroud = []
+foreground = []
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
