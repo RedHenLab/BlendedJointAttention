@@ -5,16 +5,14 @@ cam = cv2.VideoCapture('test.mp4')
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
+flag = 0
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
     if ret:
-		frame_num = frame_num+1
+    	if flag == 0:
+    		flag = 1
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-		if frame_num == 1:
-			firstFrame = gray
-		# if frame_num == 10:
-		# 	frame_num=0
 		gray = cv2.GaussianBlur(gray, (21, 21), 0)
 		frameDelta = cv2.absdiff(firstFrame, gray)
 		thresh = cv2.threshold(frameDelta, 25, 255, cv2.THRESH_BINARY)[1]
