@@ -11,7 +11,11 @@ print time
 while(1):
     ret, frame = video_capture.read()
     fgmask = fgbg.apply(frame)
-    print(fgmask.shape)
+    num_zero = 0
+    for i in range(len(fgmask.shape[0])):
+    	for j in range(len(fgmask.shape[1])):
+    		if fgmask[i][j] == 0:
+    			num_zero = num_zero+1
     cv2.imshow('frame',fgmask)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
