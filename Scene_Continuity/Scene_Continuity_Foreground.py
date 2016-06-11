@@ -13,6 +13,7 @@ while(1):
 	ret, frame = video_capture.read()
 	fgmask = fgbg.apply(frame)
 	num_white = 0
+	flag = 0
 	if(frame_num-last_detected>20):
 		last_detected = frame_num
 		for i in range(fgmask.shape[0]):
@@ -22,11 +23,13 @@ while(1):
 					if(num_white>0.8*fgmask.shape[0]*fgmask.shape[0]):
 						scene_num = scene_num + 1
 						print("Scene changed : ", scene_num)
-						j = fgmask.shape[1]+1
-						i = fgmask.shape[0]+1
+						flag = 1
+						break
+			if flag == 1:
+				break
 	cv2.imshow('Video',fgmask)
 	k = cv2.waitKey(30) & 0xff
 	if k == 27:
-        break
+		break
 cap.release()
 cv2.destroyAllWindows()
