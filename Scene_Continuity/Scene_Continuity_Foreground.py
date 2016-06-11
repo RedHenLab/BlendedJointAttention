@@ -13,8 +13,8 @@ while(1):
     ret, frame = video_capture.read()
     fgmask = fgbg.apply(frame)
     num_zero = 0
-    for i in range(len(fgmask.shape[0])):
-    	for j in range(len(fgmask.shape[1])):
+    for i in range(fgmask.shape[0]):
+    	for j in range(fgmask.shape[1]):
     		if fgmask[i][j] == 0:
     			num_zero = num_zero+1
     if(num_zero<0.1*fgmask.shape[0]*fgmask.shape[0]):
