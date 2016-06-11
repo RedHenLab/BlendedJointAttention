@@ -14,7 +14,7 @@ while(1):
 	fgmask = fgbg.apply(frame)
 	num_white = 0
 	flag = 0
-	if(frame_num-last_detected>20):
+	if(frame_num-last_detected>40):
 		last_detected = frame_num
 		for i in range(fgmask.shape[0]):
 			for j in range(fgmask.shape[1]):
