@@ -22,7 +22,8 @@ while(1):
 					if(num_white>0.8*fgmask.shape[0]*fgmask.shape[0]):
 						scene_num = scene_num + 1
 						print("Scene changed : ", scene_num)
-						break
+						j = fgmask.shape[1]+1
+						i = fgmask.shape[0]+1
 	cv2.imshow('Video',fgmask)
 	k = cv2.waitKey(30) & 0xff
 	if k == 27:
