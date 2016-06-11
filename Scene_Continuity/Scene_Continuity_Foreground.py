@@ -5,7 +5,8 @@ import datetime
 cap = cv2.VideoCapture('test.mp4')
 cv2.ocl.setUseOpenCL(False)
 fgbg = cv2.createBackgroundSubtractorMOG2()
-time = sys.getTime()
+time = datetime.datetime.now().time()
+print time
 while(1):
     ret, frame = cap.read()
     fgmask = fgbg.apply(frame)
