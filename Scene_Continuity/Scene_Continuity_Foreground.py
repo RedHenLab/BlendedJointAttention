@@ -5,12 +5,9 @@ cam = cv2.VideoCapture('test.mp4')
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
-frame_num = 0
-scene_num = 0
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
-    time.sleep(0.01)
     if ret:
 		frame_num = frame_num+1
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
