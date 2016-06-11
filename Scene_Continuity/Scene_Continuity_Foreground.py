@@ -10,7 +10,7 @@ last_detected = -20
 scene_num = 0
 while(1):
 	frame_num = frame_num + 1
-		ret, frame = video_capture.read()
+	ret, frame = video_capture.read()
 	fgmask = fgbg.apply(frame)
 	num_white = 0
 	if(frame_num-last_detected>20):
