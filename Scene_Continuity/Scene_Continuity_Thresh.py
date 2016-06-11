@@ -29,7 +29,7 @@ while True:
 				continue
 	 		(x, y, w, h) = cv2.boundingRect(c)
 			cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-			if cv2.contourArea(c) > 300000:
+			if cv2.contourArea(c) > 200000:
 				frame_num = 0
 				scene_num = scene_num+1
 				print(scene_num)
