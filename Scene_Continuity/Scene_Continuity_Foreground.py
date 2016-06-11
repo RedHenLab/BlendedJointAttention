@@ -7,6 +7,7 @@ cam.set(4,480)
 video_capture = cam
 flag = 0
 backgroud = []
+firstFrame = []
 foreground = []
 while True:
     # Capture frame-by-frame
@@ -14,6 +15,7 @@ while True:
     if ret:
     	if flag == 0:
     		flag = 1
+    		firstFrame = frame
     		backgroud = frame
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		gray = cv2.GaussianBlur(gray, (21, 21), 0)
@@ -33,8 +35,8 @@ while True:
 				print(scene_num)
 			# Display the resulting frame
 		# cv2.imshow('Video', thresh)
-		# cv2.imshow('Video', frameDelta)
-		cv2.imshow('Video', frame)
+		cv2.imshow('Video', frameDelta)
+		# cv2.imshow('Video', frame)
 		if cv2.waitKey(1) & 0xFF == ord('q'):
 			break
 		# print frame_num
