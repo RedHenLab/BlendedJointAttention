@@ -6,6 +6,7 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 frame_num = 0
+scene_num = 0
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
@@ -28,6 +29,10 @@ while True:
 				continue
 	 		(x, y, w, h) = cv2.boundingRect(c)
 			cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+			if cv2.contourArea(c) > 300000:
+				frame_num = 0
+				scene_num = scene_num+1
+				print(scene_num)
 			# Display the resulting frame
 		# cv2.imshow('Video', thresh)
 		# cv2.imshow('Video', frameDelta)
