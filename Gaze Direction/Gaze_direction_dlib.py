@@ -37,20 +37,20 @@ while True:
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
 			sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
 			sob = np.multiply(sobelx,sobely)
-			minin = 10000
+			maxin = -1
 			minj=0
 			mini=0
-			print(sob.shape)
+			print(sob)
 			for i in range(len(sob)):
 				for j in range(len(sob)):
-					if(sob[int(i)][int(j)]<minin):
-						minin=split1[i][j]
-						mini=i
-						minj=j
-						print(mini,minj)
+					if(sob[i][j]>maxin):
+						maxin=split1[i][j]
+						maxi=i
+						maxj=j
+						# print(mini,minj)
 			
-			cv2.circle(frame,(x1+mini,y1+minj),1,(0,0,255))						
-			cv2.line(frame,(x1+mini,y1+minj), (int((3*x1+4*mini-x2)/2),int((3*y1+4*minj-y2)/2)),(255,0,0))
+			cv2.circle(frame,(x1+maxi,y1+maxj),1,(0,0,255))						
+			cv2.line(frame,(x1+maxi,y1+maxj), (int((3*x1+4*maxi-x2)/2),int((3*y1+4*maxj-y2)/2)),(255,0,0))
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y
 			x2 = shape.part(45).x
@@ -60,17 +60,17 @@ while True:
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
 			sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
 			sob = np.multiply(sobelx,sobely)
-			minin = 10000
-			minj=0
-			mini=0
-			print(sob.shape)
+			maxin = -1
+			maxj=0
+			maxi=0
+			# print(sob.shape)
 			for i in range(len(sob)):
 				for j in range(len(sob)):
-					if(sob[int(i)][int(j)]<minin):
-						minin=split1[i][j]
-						mini=i
-						minj=j
-						print(mini,minj)
+					if(sob[i][j]<maxin):
+						maxin=split1[i][j]
+						maxi=i
+						maxj=j
+						# print(mini,minj)
 			
 			cv2.circle(frame,(x1+mini,y1+minj),1,(0,0,255))						
 			cv2.line(frame,(x1+mini,y1+minj), (int((3*x1+4*mini-x2)/2),int((3*y1+4*minj-y2)/2)),(255,0,0))
