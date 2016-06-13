@@ -67,7 +67,7 @@ def draw(photo):
     ####### Look for circle (the iris). Save coordinates. ########
     relative_iris_coordinates = None
     if binary_eye_image is not None:
-        eye_circles = cv2.HoughCircles(binary_eye_image, cv2.CV_HOUGH_GRADIENT, 3, 500, maxRadius = binary_eye_image.shape[0]/5)
+        eye_circles = cv2.HoughCircles(binary_eye_image, cv2.HOUGH_GRADIENT, 3, 500, maxRadius = binary_eye_image.shape[0]/5)
         if eye_circles is not None:
             #Usually gets the job done. Messy.
             circle = eye_circles[0][0]
@@ -104,7 +104,7 @@ def draw(photo):
     if iris_image is not None:
         iris_gray = cv2.cvtColor(iris_image, cv2.COLOR_RGB2GRAY)
         iris_circles_image = iris_image.copy()
-        iris_circles = cv2.HoughCircles(iris_gray, cv2.CV_HOUGH_GRADIENT, 2, 100)
+        iris_circles = cv2.HoughCircles(iris_gray, cv2.HOUGH_GRADIENT, 2, 100)
         if iris_circles is not None:
             circle=iris_circles[0][0]
             cv2.circle(iris_circles_image, (circle[0], circle[1]), circle[2], (255,0,0), thickness=2)
