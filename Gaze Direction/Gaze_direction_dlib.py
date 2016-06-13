@@ -37,7 +37,7 @@ while True:
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
 			sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
 			sob = np.multiply(sobelx,sobely)
-			maxin = 0
+			maxin = -1
 			minj=0
 			mini=0
 			print(sob)
@@ -60,7 +60,7 @@ while True:
 			sobelx = cv2.Sobel(split1,cv2.CV_64F,1,0,ksize=5)
 			sobely = cv2.Sobel(split1,cv2.CV_64F,0,1,ksize=5)
 			sob = np.multiply(sobelx,sobely)
-			maxin = 0
+			maxin = -1
 			maxj=0
 			maxi=0
 			# print(sob.shape)
