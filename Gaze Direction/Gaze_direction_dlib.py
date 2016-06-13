@@ -66,7 +66,7 @@ while True:
 			# print(sob.shape)
 			for i in range(len(sob)):
 				for j in range(len(sob)):
-					if(sob[i][j]<minin):
+					if(sob[i][j]<maxin):
 						maxin=split1[i][j]
 						maxi=i
 						maxj=j
