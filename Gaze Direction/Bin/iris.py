@@ -4,7 +4,7 @@ import pupil_detect
 #I don't use the face classifier. But I'm putting it here in case someone else
 #wants to.
 #faceCascadeClassifier = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
-eyeCascadeClassifier = cv2.CascadeClassifier("../haarcascades/haarcascade_eye.xml")
+eyeCascadeClassifier = cv2.CascadeClassifier("../../haarcascades/haarcascade_eye.xml")
 
 
 def detect_objects(image, objectClassifier, divider=4):
