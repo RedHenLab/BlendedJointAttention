@@ -27,7 +27,7 @@ while(1):
                     num_white = num_white+1
                     if(num_white>0.8*fgmask.shape[0]*fgmask.shape[0]):
                         scene_num = scene_num + 1
-                        cv2.putText(frame,("Scene changed : ", scene_num), (x,y), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
+                        cv2.putText(frame, str(scene_num), (10,10), cv2.FONT_HERSHEY_SIMPLEX, 2, 255)
                         print("Scene changed : ", scene_num)
                         flag = 1
                         break
