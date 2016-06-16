@@ -32,7 +32,7 @@ while(1):
                         break
             if flag == 1:
                 break
-    cv2.putText(frame, "Scene no .: "+str(scene_num), (40,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255) ,3)
+    cv2.putText(frame, "Scene no : "+str(scene_num), (40,40), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,124,255) ,1.5)
     out.write(frame)
     cv2.imshow('Video',frame)
     k = cv2.waitKey(30) & 0xff
