@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture('test.mp4')
+cap = cv2.VideoCapture(-1)
 video_capture = cap
 cv2.ocl.setUseOpenCL(False)
 fgbg = cv2.createBackgroundSubtractorMOG2()
