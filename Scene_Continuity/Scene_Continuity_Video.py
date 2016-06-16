@@ -11,7 +11,7 @@ scene_num = 0
 
 # Define the codec and create VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.mp4',fourcc, 20.0, (640,480))
+out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
 
 while(1):
     frame_num = frame_num + 1
