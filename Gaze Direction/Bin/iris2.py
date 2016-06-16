@@ -3,7 +3,7 @@
 # @author	pctroll a.k.a Jorge Palacios 10-87970
 # @file		iris_detection.py
 
-import cv
+import cv2 as cv
 import math
 import numpy as np
 import os
