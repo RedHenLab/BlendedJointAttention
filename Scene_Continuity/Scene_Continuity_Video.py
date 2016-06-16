@@ -2,6 +2,12 @@ import numpy as np
 import cv2
 
 cap = cv2.VideoCapture('test.mp4')
+video_capture = cap
+cv2.ocl.setUseOpenCL(False)
+fgbg = cv2.createBackgroundSubtractorMOG2()
+frame_num = 0
+last_detected = -20
+scene_num = 0
 
 # Define the codec and create VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
