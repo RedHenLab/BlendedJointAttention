@@ -34,10 +34,10 @@ while(1):
                 if flag == 1:
                     break
         cv2.putText(frame, "Scene no : "+str(scene_num), (40,40), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,124,255) ,2)
-        out.write(frame)
-        cv2.imshow('Video',frame)
     else:
         break
+    out.write(frame)
+    cv2.imshow('Video',frame)
 cap.release()
 out.release()
 cv2.destroyAllWindows()
