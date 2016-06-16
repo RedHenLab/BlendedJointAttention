@@ -33,6 +33,7 @@ while(1):
                         break
             if flag == 1:
                 break
+    out.write(frame)
     cv2.imshow('Video',frame)
     k = cv2.waitKey(30) & 0xff
     if k == 27:
