@@ -55,7 +55,11 @@ while True:
 			split = process_eye(split)
 			split = filter_eye(split)
 			split1 = detect_blob(split)
-			# frame_color[y1:y2,x1:x2]=split
+			if len(split1.shape)==3:
+				frame_color[y1:y2,x1:x2]=split1
+				frame = frame_color
+			else :
+				frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y-2
@@ -65,7 +69,11 @@ while True:
 			split = process_eye(split)
 			split = filter_eye(split)
 			split1 = detect_blob(split)
-			# frame_color[y1:y2,x1:x2]=split
+			if len(split1.shape)==3:
+				frame_color[y1:y2,x1:x2]=split1
+				frame = frame_color
+			else :
+				frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 		
 		# Display the resulting frame
