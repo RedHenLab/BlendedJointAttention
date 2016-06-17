@@ -19,7 +19,12 @@ while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
 	if ret:
-		dets = detector(frame, 1)
+		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
+        j = 0
+		for (x, y, w, h) in faces1:
+			A[j].x = x
+			A[j].y = y
 		# print(type(dets))
 		for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
