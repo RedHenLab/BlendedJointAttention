@@ -15,6 +15,8 @@ def filter_eye(split):
 	split = cv2.bilateralFilter(split,9,75,75)
 	return split
 
+def detect_blob(split):
+	detector = cv2.SimpleBlobDetector_create()
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
