@@ -13,13 +13,14 @@ video_capture = cam
 
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
-
+A = dlib.dlib.rectangle()
 
 while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
 	if ret:
 		dets = detector(frame, 1)
+		# print(type(dets))
 		for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 			shape = predictor(frame, d)
