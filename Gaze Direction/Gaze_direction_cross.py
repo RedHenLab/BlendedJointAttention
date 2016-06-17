@@ -66,6 +66,8 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
+			y1 = y1+2
+			y2 = y2-2
 			# cv2.rectangle(frame_color,(x1,y1), (x2,y2), (0, 0, 255), 1)
 			cv2.circle(frame_color,(x1+centre[0],y1+centre[1]),2,(0,0,255))
 			cv2.line(frame_color,(x1+centre[0],y1+centre[1]), (int((3*x1+4*centre[0]-x2)/2),int((3*y1+4*centre[1]-y2)/2)),(255,0,0))			
@@ -78,6 +80,8 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
+			y1 = y1+2
+			y2 = y2-2
 			# cv2.rectangle(frame_color,(x1,y1), (x2,y2), (0, 0, 255), 1)
 			cv2.circle(frame_color,(x1+centre[0],y1+centre[1]),2,(0,0,255))
 			cv2.line(frame_color,(x1+centre[0],y1+centre[1]), (int((3*x1+4*centre[0]-x2)/2),int((3*y1+4*centre[1]-y2)/2)),(255,0,0))
