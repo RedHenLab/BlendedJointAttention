@@ -21,17 +21,15 @@ while True:
 	if ret:
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
-		j = 0
-		A = dlib.dlib.rectangles()
+		B = list()
+		A = dlib.dlib.rectangle()
 		for (x, y, w, h) in faces1:
-			A[j].l = x
-			A[j].t = y
-			A[j].r = x+w
-			A[j].b = y+h
-			j = j+1
-		print(type(A))
-		# print(type(dets))
-		for k, d in enumerate(A):
+			A.l = x
+			A.t = y
+			A.r = x+w
+			A.b = y+h
+			B.append(A)
+		for k, d in enumerate(B):
 	        # Get the landmarks/parts for the face in box d.
 			shape = predictor(frame, d)
 	        # print(type(shape.part(1).x))
