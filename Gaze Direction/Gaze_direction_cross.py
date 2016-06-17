@@ -17,6 +17,10 @@ def filter_eye(split):
 
 def detect_blob(split):
 	detector = cv2.SimpleBlobDetector_create()
+	keypoints = detector.detect(split)
+	if(len(keypoints)!=0):
+		split = cv2.drawKeypoints(split , keypoints, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
