@@ -39,6 +39,7 @@ while True:
 			x2 = shape.part(39).x+10
 			y2 = shape.part(40).y+10
 			split = frame[y1:y2,x1:x2]
+			split = process_eye(split)
 			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x-10
@@ -46,9 +47,7 @@ while True:
 			x2 = shape.part(45).x+10
 			y2 = shape.part(46).y+10
 			split = frame[y1:y2,x1:x2]
-			split = cv2.GaussianBlur(split,(5,5),0)
-			split = cv2.adaptiveThreshold(split,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,11,2)
-			split = cv2.dilate(split, None, iterations=1)
+			split = process_eye(split)
 			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 		
