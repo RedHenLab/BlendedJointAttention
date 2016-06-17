@@ -28,6 +28,7 @@ while True:
 			A[j].t = y
 			A[j].r = x+w
 			A[j].b = y+h
+			j = j+1
 		print(type(A))
 		# print(type(dets))
 		for k, d in enumerate(A):
