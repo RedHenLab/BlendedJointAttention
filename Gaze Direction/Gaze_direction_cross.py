@@ -20,8 +20,8 @@ while True:
 	ret, frame = video_capture.read()
 	if ret:
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
-        j = 0
+		faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
+		j = 0
 		for (x, y, w, h) in faces1:
 			A[j].x = x
 			A[j].y = y
