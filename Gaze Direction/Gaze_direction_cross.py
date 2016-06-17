@@ -63,8 +63,8 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
-			cv2.rectangle(frame,(centre[0],centre[1]), (x2,y2), (0, 0, 255), 2)
-			cv2.circle(frame,centre,2,(0,0,255))
+			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
+			cv2.circle(frame,(centre[0],centre[1]),2,(0,0,255))
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y-2
 			x2 = shape.part(45).x
