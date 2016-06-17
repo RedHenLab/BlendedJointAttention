@@ -33,6 +33,8 @@ while True:
 			x2 = shape.part(39).x+10
 			y2 = shape.part(40).y+10
 			split = frame[y1:y2,x1:x2]
+			split = cv2.dilate(split, None, iterations=2)
+			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x-10
 			y1 = shape.part(43).y-10
