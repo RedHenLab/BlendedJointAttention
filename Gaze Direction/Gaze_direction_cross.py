@@ -16,19 +16,20 @@ def filter_eye(split):
 	return split
 
 def cross_spread(split):
-	flag = 0
 	first= [0,0]
 	last = [split.shape[1],split.shape[0]]
 	for i in range(split.shape[0]):
 		for j in range(split.shape[1]):
-			if split[i][j]==0 and flag == 0:
+			if split[i][j]==0 :
 				first = [j,i]
-				i = split.shape[0]
-				break
-			elif split[i][j]==0:
-				last = [j,i]
-				i = split.shape[0]
-				break
+				for i in range(j,split.shape[1]):
+					if split[i][j]==0: 
+						last[0]=j
+				for i in range(i,split.shape[0]):
+					if split[i][j]==0: 
+						last[1]=j
+				
+			break
 	centre = [(last[0]+first[0])/2, (last[1]+first[1])/2]
 	return centre
 
