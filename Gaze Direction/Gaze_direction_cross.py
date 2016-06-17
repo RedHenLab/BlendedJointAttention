@@ -36,6 +36,7 @@ while True:
 			split = frame[y1:y2,x1:x2]
 			split = cv2.GaussianBlur(split,(5,5),0)
 			split = cv2.adaptiveThreshold(split,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,11,2)
+			split = cv2.dilate(thresh, None, iterations=2)
 			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x-10
