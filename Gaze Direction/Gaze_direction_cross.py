@@ -18,15 +18,17 @@ def filter_eye(split):
 def cross_spread(split):
 	flag = 0
 	first= [0,0]
-	last = [split.shape[0],split.shape[1]]
+	last = [split.shape[1],split.shape[0]]
 	for i in range(split.shape[0]):
 		for j in range(split.shape[1]):
 			if split[i][j]==0 and flag == 0:
 				first = [i,j]
-				i = split.shape[0]-1
+				i = split.shape[0]
+				break
 			elif split[i][j]==0:
 				last = [i,j]
-				i = split.shape[0]-1
+				i = split.shape[0]
+				break
 	centre = [(last[0]+first[0])/2, (last[1]+first[1])/2]
 	return centre
 
@@ -64,6 +66,7 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
+			# cv2.rectangle(frame_color,(x1,y1), (x2,y2), (0, 0, 255), 1)
 			cv2.circle(frame_color,(x1+centre[1],y1+centre[0]),2,(0,0,255))
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y-2
@@ -74,6 +77,7 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
+			# cv2.rectangle(frame_color,(x1,y1), (x2,y2), (0, 0, 255), 1)
 			cv2.circle(frame_color,(x1+centre[1],y1+centre[0]),2,(0,0,255))
 		
 		# Display the resulting frame
