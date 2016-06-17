@@ -10,11 +10,11 @@ def process_eye(split):
 	split = cv2.dilate(split, None, iterations=1)
 	return split
 
-def filter(split):
+def filter_eye(split):
 	split = cv2.medianBlur(split,5)
 	split = cv2.bilateralFilter(split,9,75,75)
 	return split
-	
+
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
@@ -45,6 +45,7 @@ while True:
 			y2 = shape.part(40).y+10
 			split = frame[y1:y2,x1:x2]
 			split = process_eye(split)
+			split = filter(split)
 			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x-10
