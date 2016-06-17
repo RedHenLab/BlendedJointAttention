@@ -19,6 +19,7 @@ while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
 	if ret:
+		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		dets = detector(frame, 1)
 		for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
@@ -33,7 +34,7 @@ while True:
 			x2 = shape.part(39).x+10
 			y2 = shape.part(40).y+10
 			split = frame[y1:y2,x1:x2]
-			split = cv2.dilate(split, None, iterations=2)
+			split = cv2.threshold(split, 25, 255, cv2.THRESH_BINARY)[1]
 			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x-10
