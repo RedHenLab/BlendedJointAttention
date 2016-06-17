@@ -1,4 +1,4 @@
-#Fabian implementation
+#Cross spread implemetation
 
 import cv2
 import numpy as np
