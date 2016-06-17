@@ -19,7 +19,7 @@ def filter_eye(split):
 # 	for i in range(split.shape[0]):
 # 		for j in range(split.shape[1]):
 # 			if split[i][j]==0:
-
+				
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
@@ -45,18 +45,18 @@ while True:
 			cv2.circle(frame,(shape.part(42).x,shape.part(42).y),2,(0,0,255))
 			cv2.circle(frame,(shape.part(45).x,shape.part(45).y),2,(0,0,255))
 			x1 = shape.part(36).x
-			y1 = shape.part(37).y
+			y1 = shape.part(37).y-2
 			x2 = shape.part(39).x
-			y2 = shape.part(40).y
+			y2 = shape.part(40).y+2
 			split = frame[y1:y2,x1:x2]
 			split = process_eye(split)
 			split = filter_eye(split)
 			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x
-			y1 = shape.part(43).y
+			y1 = shape.part(43).y-2
 			x2 = shape.part(45).x
-			y2 = shape.part(46).y
+			y2 = shape.part(46).y+2
 			split = frame[y1:y2,x1:x2]
 			split = process_eye(split)
 			split = filter_eye(split)
