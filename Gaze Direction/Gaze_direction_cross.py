@@ -14,6 +14,7 @@ def filter(split):
 	split = cv2.medianBlur(split,5)
 	split = cv2.bilateralFilter(split,9,75,75)
 	return split
+	
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
