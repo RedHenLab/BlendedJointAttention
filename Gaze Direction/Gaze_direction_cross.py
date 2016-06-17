@@ -15,13 +15,6 @@ def filter_eye(split):
 	split = cv2.bilateralFilter(split,9,75,75)
 	return split
 
-def detect_blob(split):
-	detector = cv2.SimpleBlobDetector_create()
-	keypoints = detector.detect(split)
-	if(len(keypoints)!=0):
-		split = cv2.drawKeypoints(split , keypoints, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-	return split
-
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
@@ -36,7 +29,6 @@ while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
 	if ret:
-		frame_color = frame
 		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		dets = detector(frame, 1)
 		for k, d in enumerate(dets):
@@ -54,12 +46,7 @@ while True:
 			split = frame[y1:y2,x1:x2]
 			split = process_eye(split)
 			split = filter_eye(split)
-			split1 = detect_blob(split)
-			if len(split1.shape)==3:
-				frame_color[y1:y2,x1:x2]=split1
-				frame = frame_color
-			else :
-				frame[y1:y2,x1:x2]=split
+			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y-2
@@ -68,12 +55,7 @@ while True:
 			split = frame[y1:y2,x1:x2]
 			split = process_eye(split)
 			split = filter_eye(split)
-			split1 = detect_blob(split)
-			if len(split1.shape)==3:
-				frame_color[y1:y2,x1:x2]=split1
-				frame = frame_color
-			else :
-				frame[y1:y2,x1:x2]=split
+			frame[y1:y2,x1:x2]=split
 			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 		
 		# Display the resulting frame
