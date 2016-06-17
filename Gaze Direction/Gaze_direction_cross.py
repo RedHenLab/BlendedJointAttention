@@ -67,7 +67,7 @@ while True:
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
 			# cv2.rectangle(frame_color,(x1,y1), (x2,y2), (0, 0, 255), 1)
-			cv2.circle(frame_color,(x1+centre[1],y1+centre[0]),2,(0,0,255))
+			cv2.circle(frame_color,(x1+centre[0],y1+centre[1]),2,(0,0,255))
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y-2
 			x2 = shape.part(45).x
@@ -78,7 +78,7 @@ while True:
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
 			# cv2.rectangle(frame_color,(x1,y1), (x2,y2), (0, 0, 255), 1)
-			cv2.circle(frame_color,(x1+centre[1],y1+centre[0]),2,(0,0,255))
+			cv2.circle(frame_color,(x1+centre[0],y1+centre[1]),2,(0,0,255))
 		
 		# Display the resulting frame
         cv2.imshow('Video', frame_color)
