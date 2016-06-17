@@ -33,12 +33,13 @@ while True:
 			x2 = shape.part(39).x+10
 			y2 = shape.part(40).y+10
 			split = frame[y1:y2,x1:x2]
-			cv2.rectangle(frame,())
+			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 			x1 = shape.part(42).x-10
 			y1 = shape.part(43).y-10
 			x2 = shape.part(45).x+10
 			y2 = shape.part(46).y+10
 			split = frame[y1:y2,x1:x2]
+			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
 		
 		# Display the resulting frame
         cv2.imshow('Video', frame)
