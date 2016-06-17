@@ -10,8 +10,10 @@ def process_eye(split):
 	split = cv2.dilate(split, None, iterations=1)
 	return split
 
-def median_filtering(split):
-	
+def filter(split):
+	split = cv2.medianBlur(split,5)
+	split = cv2.bilateralFilter(split,9,75,75)
+	return split
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
