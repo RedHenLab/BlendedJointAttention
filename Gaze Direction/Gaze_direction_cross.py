@@ -23,13 +23,13 @@ def cross_spread(split):
 		for j in range(split.shape[1]):
 			if split[i][j]==0 and flag == 0:
 				first = [i,j]
-				i = split.shape[0]
+				i = split.shape[0]-1
 			elif split[i][j]==0:
 				last = [i,j]
-				i = split.shape[0]
+				i = split.shape[0]-1
 	centre = [(last[0]+first[0])/2, (last[1]+first[1])/2]
 	return centre
-	
+
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
@@ -63,7 +63,7 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
-			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
+			cv2.rectangle(frame,(centre[0],centre[1]), (x2,y2), (0, 0, 255), 2)
 			cv2.circle(frame,centre,2,(0,0,255))
 			x1 = shape.part(42).x
 			y1 = shape.part(43).y-2
@@ -74,7 +74,7 @@ while True:
 			split = filter_eye(split)
 			centre = cross_spread(split)
 			frame[y1:y2,x1:x2]=split
-			cv2.rectangle(frame,(x1,y1), (x2,y2), (0, 0, 255), 2)
+			cv2.rectangle(frame,(centre[0],centre[1]), (x2,y2), (0, 0, 255), 2)
 			cv2.circle(frame,centre,2,(0,0,255))
 		
 		# Display the resulting frame
