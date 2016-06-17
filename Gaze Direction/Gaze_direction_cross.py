@@ -22,13 +22,12 @@ def cross_spread(split):
 		for j in range(split.shape[1]):
 			if split[i][j]==0 :
 				first = [j,i]
-				for i in range(j,split.shape[1]):
-					if split[i][j]==0: 
+				for k in range(j,split.shape[1]):
+					if split[i][k]==0: 
 						last[0]=j
 				for i in range(i,split.shape[0]):
 					if split[i][j]==0: 
-						last[1]=j
-				
+						last[1]=i
 			break
 	centre = [(last[0]+first[0])/2, (last[1]+first[1])/2]
 	return centre
