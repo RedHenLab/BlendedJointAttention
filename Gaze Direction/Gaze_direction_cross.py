@@ -16,10 +16,20 @@ def filter_eye(split):
 	return split
 
 def cross_spread(split):
+	flag = 0
+	first= [0,0]
+	last = [split.shape[0],split.shape[1]]
 	for i in range(split.shape[0]):
 		for j in range(split.shape[1]):
-			if split[i][j]==0:
-
+			if split[i][j]==0 and flag == 0:
+				first = [i,j]
+				i = split.shape[0]
+			elif split[i][j]==0:
+				last = [i,j]
+				i = split.shape[0]
+	centre = [(last[0]+first[0])/2, (last[1]+first[1])/2]
+	return centre
+	
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
