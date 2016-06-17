@@ -11,7 +11,7 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
-faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
+detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
 
@@ -19,17 +19,8 @@ while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
 	if ret:
-		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-		faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
-		B = list()
-		A = dlib.dlib.rectangle()
-		for (x, y, w, h) in faces1:
-			A.l = x
-			A.t = y
-			A.r = x+w
-			A.b = y+h
-			B.append(A)
-		for k, d in enumerate(B):
+		dets = detector(frame, 1)
+		for k, d in enumerate(dets):
 	        # Get the landmarks/parts for the face in box d.
 			shape = predictor(frame, d)
 	        # print(type(shape.part(1).x))
