@@ -32,7 +32,7 @@ while True:
 		for k, d in enumerate(B):
 	        # Get the landmarks/parts for the face in box d.
 			shape = predictor(frame, d)
-	        print(type(shape.part(1).x))
+			print(type(shape.part(1).x))
 			cv2.circle(frame,(shape.part(36).x,shape.part(36).y),2,(0,0,255))
 			cv2.circle(frame,(shape.part(39).x,shape.part(39).y),2,(0,0,255))
 			cv2.circle(frame,(shape.part(42).x,shape.part(42).y),2,(0,0,255))
