@@ -11,8 +11,8 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
-faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
-predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
+faceCascade1 = cv2.CascadeClassifier('../../haarcascades/haarcascade_frontalface_alt2.xml')
+predictor = dlib.shape_predictor('../../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
 
 while True:
