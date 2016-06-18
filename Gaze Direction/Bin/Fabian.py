@@ -36,9 +36,6 @@ while True:
     # Display the resulting frame
     frame = cv2.flip(frame,1)
 
-    # write the flipped frame
-    out.write(frame)
-
     cv2.imshow('Video',frame)
     #cv2.imshow('Video', frame)
     fr = fr + 1
