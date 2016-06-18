@@ -33,7 +33,7 @@ def cross_spread(split):
 	return centre
 
 # Video capture via webcam
-cam = cv2.VideoCapture(-1)
+cam = cv2.VideoCapture("test.mp4")
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
