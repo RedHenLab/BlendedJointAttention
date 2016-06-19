@@ -48,6 +48,7 @@ while True:
             roi_eye1 = filter_eye(roi_eye1)
             roi_eye1 = process_eye(roi_eye1)
             roi_eye2 = frame[y3:y4,x3:x4]
+            roi_eye1 = filter_eye(roi_eye1)
             roi_eye2 = process_eye(roi_eye2)
             frame[y1:y2,x1:x2] = roi_eye1
             frame[y3:y4,x3:x4] = roi_eye2
