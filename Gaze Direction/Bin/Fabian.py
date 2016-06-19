@@ -14,7 +14,7 @@ video_capture = cam
 def process_eye(split):
     split = cv2.GaussianBlur(split,(5,5),0)
     split = cv2.dilate(split, None, iterations=1)
-    split = cv2.adaptiveThreshold(split,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,12,2)
+    split = cv2.adaptiveThreshold(split,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,11,2)
     return split
 
 def filter_eye(split):
