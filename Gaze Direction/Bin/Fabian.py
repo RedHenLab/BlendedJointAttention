@@ -18,8 +18,8 @@ def process_eye(split):
     return split
 
 def filter_eye(split):
-    split = cv2.medianBlur(split,5)
-    split = cv2.bilateralFilter(split,9,75,75)
+    split = cv2.medianBlur(split,10)
+    split = cv2.bilateralFilter(split,20,75,75)
     return split
 
 detector = dlib.get_frontal_face_detector()
@@ -44,10 +44,8 @@ while True:
             y3 = shape.part(43).y-10
             x4 = shape.part(45).x+4
             y4 = shape.part(46).y+10
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0),2)
             roi_eye1 = frame[y1:y2,x1:x2]
             roi_eye1 = process_eye(roi_eye1)
-            cv2.rectangle(frame, (x3, y3), (x4, y4), (255,0,0),2)
             roi_eye2 = frame[y3:y4,x3:x4]
             roi_eye2 = process_eye(roi_eye2)
             frame[y1:y2,x1:x2] = roi_eye1
