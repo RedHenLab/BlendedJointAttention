@@ -18,7 +18,7 @@ def process_eye(split):
     return split
 
 def filter_eye(split):
-    split = cv2.medianBlur(split,10)
+    split = cv2.medianBlur(split,7)
     split = cv2.bilateralFilter(split,9,75,75)
     return split
 
