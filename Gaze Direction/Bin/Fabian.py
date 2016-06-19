@@ -11,6 +11,17 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
+def process_eye(split):
+    split = cv2.GaussianBlur(split,(5,5),0)
+    split = cv2.adaptiveThreshold(split,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,11,2)
+    split = cv2.dilate(split, None, iterations=1)
+    return split
+
+def filter_eye(split):
+    split = cv2.medianBlur(split,5)
+    split = cv2.bilateralFilter(split,9,75,75)
+    return split
+
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
@@ -34,8 +45,10 @@ while True:
             y4 = shape.part(46).y+10
             cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0),2)
             eye1 = frame[y1:y2,x1:x2]
+            eye1 = filter_eye(process_eye(eye1))
             cv2.rectangle(frame, (x3, y3), (x4, y4), (255,0,0),2)
             eye2 = frame[y3:y4,x3:x4]
+            eye2 = filter_eye(process_eye(eye2))
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
