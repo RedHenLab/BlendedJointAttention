@@ -28,11 +28,12 @@ while True:
             y1 = shape.part(37).y-10
             x2 = shape.part(39).x+4
             y2 = shape.part(40).y+10
-            x3 = shape.part(42).x
-            y3 = shape.part(43).y
-            x4 = shape.part(45).x
-            y4 = shape.part(46).y
+            x3 = shape.part(42).x-4
+            y3 = shape.part(43).y-10
+            x4 = shape.part(45).x+4
+            y4 = shape.part(46).y+10
             cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0),2)
+            cv2.rectangle(frame, (x3, y3), (x4, y4), (255,0,0),2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
