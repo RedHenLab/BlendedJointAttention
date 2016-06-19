@@ -45,11 +45,11 @@ while True:
             x4 = shape.part(45).x+4
             y4 = shape.part(46).y+10
             cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0),2)
-            eye1 = frame[y1:y2,x1:x2]
-            # eye1 = process_eye(eye1)
+            roi_eye1 = frame[y1:y2,x1:x2]
+            roi_eye1 = process_eye(roi_eye1)
             cv2.rectangle(frame, (x3, y3), (x4, y4), (255,0,0),2)
-            eye2 = frame[y3:y4,x3:x4]
-            # eye2 = process_eye(eye2)
+            roi_eye2 = frame[y3:y4,x3:x4]
+            roi_eye2 = process_eye(roi_eye2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
