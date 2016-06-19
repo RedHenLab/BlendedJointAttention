@@ -31,6 +31,7 @@ while True:
     ret, frame = video_capture.read()
     if ret:
         dets = detector(frame, 1)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         for k, d in enumerate(dets):
             # Get the landmarks/parts for the face in box d.
             shape = predictor(frame, d)
