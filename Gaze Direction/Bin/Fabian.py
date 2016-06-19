@@ -12,7 +12,7 @@ cam.set(4,480)
 video_capture = cam
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('../../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
 
 while True:
@@ -24,11 +24,14 @@ while True:
             # Get the landmarks/parts for the face in box d.
             shape = predictor(frame, d)
             # print(type(shape.part(1).x))
-            x1 = shape.part(36).x
-            y1 = shape.part(37).y
-            x2 = shape.part(39).x
-            y2 = shape.part(40).y
-            
+            x1 = shape.part(36).x-4
+            y1 = shape.part(37).y-10
+            x2 = shape.part(39).x+4
+            y2 = shape.part(40).y+10
+            x3 = shape.part(42).x
+            y3 = shape.part(43).y
+            x4 = shape.part(45).x
+            y4 = shape.part(46).y
             cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0),2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
