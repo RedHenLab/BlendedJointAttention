@@ -28,7 +28,8 @@ while True:
             y1 = shape.part(37).y
             x2 = shape.part(39).x
             y2 = shape.part(40).y
-        
+            
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (255,0,0),2)
         # Display the resulting frame
         cv2.imshow('Video', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
