@@ -24,6 +24,7 @@ while True:
 			mid_x = [(shape.part(1).x+shape.part(15).x)/2, (shape.part(1).y+shape.part(15).y)/2]
 			mid_y = [(shape.part(27).x+shape.part(66).x)/2, (shape.part(27).y+shape.part(66).y)/2]
 			nose = [shape.part(30).x,shape.part(30).x]
+			final_x = 3*nose[0]-2*mid_x[0]
 	# Display the resulting frame
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
