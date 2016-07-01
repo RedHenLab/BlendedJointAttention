@@ -16,7 +16,8 @@ predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landma
 while True:
     # Capture frame-by-frame
 	ret, frame = video_capture.read()
-
+	if ret:
+		continue
 	# Display the resulting frame
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
