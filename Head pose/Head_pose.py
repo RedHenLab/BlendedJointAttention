@@ -10,6 +10,10 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
+# Define the codec and create VideoWriter object
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
+
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
@@ -35,5 +39,6 @@ while True:
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 	    break
 # Release video capture
+out.release()
 video_capture.release()
 cv2.destroyAllWindows()
