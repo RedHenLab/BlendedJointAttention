@@ -5,7 +5,7 @@ import numpy as np
 import dlib 
 
 # Video capture via webcam
-cam = cv2.VideoCapture('../Test/test.mp4')
+cam = cv2.VideoCapture(-1)
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
@@ -13,15 +13,11 @@ video_capture = cam
 # Define the codec and create VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
-
-i = 100
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor('../dlibcascades/shape_predictor_68_face_landmarks.dat')
 
-while i>0:
+while True:
     # Capture frame-by-frame
-	i = i-1
-	print i
 	ret, frame = video_capture.read()
 	if ret:
 		dets = detector(frame, 1)
