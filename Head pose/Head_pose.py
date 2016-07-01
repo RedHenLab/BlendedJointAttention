@@ -26,7 +26,7 @@ while True:
 			shape = predictor(frame, d)
 			mid_x = [(shape.part(1).x+shape.part(15).x)/2, (shape.part(1).y+shape.part(15).y)/2]
 			mid_y = [(shape.part(27).x+shape.part(66).x)/2, (shape.part(27).y+shape.part(66).y)/2]
-			nose = [shape.part(30).x,shape.part(30).y]
+			nose = [(shape.part(30).x+shape.part(29).x)/2,(shape.part(30).y+shape.part(29).y)/2ss]
 			final_x = 3*nose[0]-2*mid_x[0]
 			final_y = 3*nose[1]-2*mid_y[1]
 			# print nose,final_x
