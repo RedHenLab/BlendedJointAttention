@@ -26,6 +26,8 @@ while True:
 			nose = [shape.part(30).x,shape.part(30).x]
 			final_x = 3*nose[0]-2*mid_x[0]
 			final_y = 3*nose[1]-2*mid_y[1]
+			cv2.circle(frame,(final_x,final_y),2,(0,0,255))
+			cv2.circle(frame,(nose[0],nose[1]),2,(0,0,255))
 	# Display the resulting frame
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
