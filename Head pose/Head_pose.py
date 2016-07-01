@@ -22,7 +22,8 @@ while True:
 		    # Get the landmarks/parts for the face in box d.
 			shape = predictor(frame, d)
 			for i in (1,8,15,27,33):
-				cv2.circle(frame,(shape.part(i).x,shape.part(i).y),2,(0,0,255))
+				cv2.circle(frame,(,shape.part(i).y),2,(0,0,255))
+			mid_x = (shape.part(1).x+shape.part(15).x)/2
 	# Display the resulting frame
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
