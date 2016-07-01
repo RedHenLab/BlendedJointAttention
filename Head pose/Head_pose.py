@@ -20,7 +20,7 @@ while True:
 		dets = detector(frame, 1)
 		for k, d in enumerate(dets):
 		    # Get the landmarks/parts for the face in box d.
-    		shape = predictor(frame, d)
+			shape = predictor(frame, d)
 	# Display the resulting frame
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
