@@ -29,6 +29,7 @@ while True:
 			print nose,final_x
 			cv2.circle(frame,(final_x,final_y),2,(0,0,255))
 			cv2.circle(frame,(nose[0],nose[1]),2,(0,0,255))
+			cv2.line(frame,(nose[0],nose[1]), (final_x,final_y),(255,0,0))
 	# Display the resulting frame
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
