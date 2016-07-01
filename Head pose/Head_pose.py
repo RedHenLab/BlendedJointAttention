@@ -38,6 +38,7 @@ while i>0:
 			cv2.circle(frame,(nose[0],nose[1]),2,(0,0,255))
 			cv2.line(frame,(nose[0],nose[1]), (final_x,final_y),(255,0,0),3)
 	# Display the resulting frame
+	out.write(frame)
 	cv2.imshow('Video', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 	    break
