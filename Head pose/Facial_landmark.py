@@ -1,4 +1,4 @@
-# Head pose estimation via dlib
+# Facial landmark detection
 
 import cv2
 import numpy as np
