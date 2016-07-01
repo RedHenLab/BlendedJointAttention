@@ -26,7 +26,7 @@ while True:
 			nose = [shape.part(30).x,shape.part(30).y]
 			final_x = 3*nose[0]-2*mid_x[0]
 			final_y = 3*nose[1]-2*mid_y[1]
-			print nose,final_x
+			# print nose,final_x
 			cv2.circle(frame,(final_x,final_y),2,(0,0,255))
 			cv2.circle(frame,(nose[0],nose[1]),2,(0,0,255))
 			cv2.line(frame,(nose[0],nose[1]), (final_x,final_y),(255,0,0))
