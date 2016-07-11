@@ -33,6 +33,7 @@ Required Packages:
 	<li> DLib </li>
 	<li> pympi-ling </li>
 	<li> PySceneDetect </li>
+	<li> MeshLab </li>
 </ol>
 
 -----------------------------------------
