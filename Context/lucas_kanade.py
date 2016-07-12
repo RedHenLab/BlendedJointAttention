@@ -34,13 +34,14 @@ while(1):
 
   # draw the tracks
   for i,(new,old) in enumerate(zip(good_new,good_old)):
+      print i
       a,b = new.ravel()
       c,d = old.ravel()
       # mask = cv2.line(frame, (a,b),(c,d), color[i].tolist(), 2)
-      frame = cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
+      # frame = cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
   # img = cv2.add(frame,mask)
 
-  cv2.imshow('video',frame)
+  cv2.imshow('Video',frame)
   k = cv2.waitKey(30) & 0xff
   if k == 27:
       break
