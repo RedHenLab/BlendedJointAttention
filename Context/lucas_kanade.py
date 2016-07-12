@@ -47,7 +47,7 @@ while(1):
 
   # Now update the previous frame and previous points
   old_gray = frame_gray.copy()
-  # p0 = good_new.reshape(-1,1,2)
+  p0 = good_new.reshape(-1,1,2)
 
 cv2.destroyAllWindows()
 cap.release()
