@@ -22,7 +22,6 @@ while(1):
   elif k == ord('s'):
     cv2.imwrite('opticalfb.png',frame2)
     cv2.imwrite('opticalhsv.png',bgr)
- prvs = next
- 
+  prvs = next
 cap.release()
 cv2.destroyAllWindows()
