@@ -18,6 +18,7 @@ Sub-repositories:
 <li> Blended CLassic Joint attention : Detectiong instances of BCJA from instances without BCJA </li>
 <li> Reaction Shots : Analyse reaction shots (of surprise, awe etc.) </li>
 <li> Gesture Recognition : Recognising multimodal gestures </li>
+<li> Head pose : Configuiring head pose to gaze direction and independent head pose stimation</li>
 </ol>
 
 ----------------------------------------
