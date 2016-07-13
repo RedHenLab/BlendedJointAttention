@@ -9,7 +9,7 @@ corners = np.int0(corners)
 print corners
 for i in corners:
     x,y = i.ravel()
-    cv2.circle(img,(x,y),3,255,-1)
+    cv2.circle(img,(x,y),1,(0,0,255),-1)
 
 cv2.imshow('image',img)
 cv2.waitKey(0)
