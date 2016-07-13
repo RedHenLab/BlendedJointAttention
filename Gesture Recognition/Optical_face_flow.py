@@ -5,7 +5,7 @@ import numpy as np
 faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
 
 # Video capture via webcam
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture("../Test/test.mp4")
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
@@ -49,7 +49,7 @@ while True:
 			img = cv2.add(frame,mask)
 
 		# Display the resulting frame
-		cv2.imshow('Video', frame)
+		cv2.imshow('Video', img)
 		if cv2.waitKey(20) & 0xFF == ord('q'):
 			break
 		# Release video capture
