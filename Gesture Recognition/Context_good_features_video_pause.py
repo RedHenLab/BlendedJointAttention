@@ -20,7 +20,7 @@ while True:
 		# Create a mask image for drawing purposes
 		mask = np.zeros_like(old_frame)
 		break
-		
+
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
@@ -31,6 +31,8 @@ while True:
 		for (x, y, w, h) in faces1:
 			roi_gray = gray[y:y+h, x:x+w]
 			roi_color = frame[y:y+h, x:x+w]
+			# calculate optical flow
+			p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
 			corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
 			corners = np.int0(corners)
 			# print corners
