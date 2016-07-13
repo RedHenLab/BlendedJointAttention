@@ -27,13 +27,14 @@ while True:
     if ret:
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		faces1 = faceCascade1.detectMultiScale(gray, 1.4, 5)
+		img = frame
 		# Draw a rectangle around the faces
 		for (x, y, w, h) in faces1:
 			roi_gray = gray[y:y+h, x:x+w]
 			roi_color = frame[y:y+h, x:x+w]
 			
 			# calculate optical flow
-			p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, winSize  = (15,15), maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
+			p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
 			
 			# Select good points
 			good_new = p1[st==1]
