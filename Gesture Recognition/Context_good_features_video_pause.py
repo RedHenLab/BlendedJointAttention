@@ -17,7 +17,6 @@ while True:
 		faces1 = faceCascade1.detectMultiScale(gray, 1.4, 5)
 		# Draw a rectangle around the faces
 		for (x, y, w, h) in faces1:
-			cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
 			roi_gray = gray[y:y+h, x:x+w]
 			roi_color = frame[y:y+h, x:x+w]
 			corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
