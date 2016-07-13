@@ -11,6 +11,7 @@ cam.set(4,480)
 video_capture = cam
 frame_num = 0
 roi_gray_old=[]
+p0 = []
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
@@ -30,7 +31,7 @@ while True:
 				frame_num = frame_num + 1
 			else :
 				# calculate optical flow
-				p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
+				p1, st, err = cv2.calcOpticalFlowPyrLK(roi_gray_old, roi_gray, p0,	maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
 
 				# Select good points
 				good_new = p1[st==1]
@@ -38,11 +39,11 @@ while True:
 
 				# draw the tracks
 				for i,(new,old) in enumerate(zip(good_new,good_old)):
-				# print i
-				a,b = new.ravel()
-				c,d = old.ravel()
-				cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
-				cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
+					# print i
+					a,b = new.ravel()
+					c,d = old.ravel()
+					cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
+					cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
 				img = cv2.add(frame,mask)
 
 		# Display the resulting frame
