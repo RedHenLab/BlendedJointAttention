@@ -2,6 +2,11 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+# Defining cascade variables
+faceCascade1 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt2.xml')
+faceCascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
+faceCascade3 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_alt.xml')
+
 # Video capture via webcam
 cam = cv2.VideoCapture('../Test/test.mp4')
 cam.set(3,640)
