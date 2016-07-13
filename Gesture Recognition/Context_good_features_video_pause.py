@@ -9,6 +9,7 @@ cam = cv2.VideoCapture(0)
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
+frame_num = 0
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
@@ -16,16 +17,17 @@ while True:
 		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		faces1 = faceCascade1.detectMultiScale(gray, 1.4, 5)
 		# Draw a rectangle around the faces
-		for (x, y, w, h) in faces1:
-			roi_gray = gray[y:y+h, x:x+w]
-			roi_color = frame[y:y+h, x:x+w]
-			corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
-			corners = np.int0(corners)
-			# print corners
-			for i in corners:
-				x1,y1 = i.ravel()
-				cv2.circle(frame,(x+x1,y+y1),3,(255,255,255),-1)
-
+		if frame_num == 0:
+			for (x, y, w, h) in faces1:
+				roi_gray = gray[y:y+h, x:x+w]
+				roi_color = frame[y:y+h, x:x+w]
+				corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
+				corners = np.int0(corners)
+				# print corners
+				for i in corners:
+					x1,y1 = i.ravel()
+					cv2.circle(frame,(x+x1,y+y1),3,(255,255,255),-1)
+			frame_num = frame_num + 1
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
 		if cv2.waitKey(20) & 0xFF == ord('q'):
