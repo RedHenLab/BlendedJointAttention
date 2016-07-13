@@ -20,7 +20,7 @@ while True:
 			cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
 			roi_gray = gray[y:y+h, x:x+w]
 			roi_color = frame[y:y+h, x:x+w]
-			corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
+			corners = cv2.goodFeaturesToTrack(roi_gray,90,0.03,10)
 			corners = np.int0(corners)
 			# print corners
 			for i in corners:
