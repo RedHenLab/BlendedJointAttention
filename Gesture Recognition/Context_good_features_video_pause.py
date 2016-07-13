@@ -10,6 +10,14 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 frame_num = 0
+
+# Take first frame and find corners in it
+ret, old_frame = cam.read()
+old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
+p0 = cv2.goodFeaturesToTrack(old_gray, mask = None, maxCorners = 100, qualityLevel = 0.3, minDistance = 7, blockSize = 7 )
+# Create a mask image for drawing purposes
+mask = np.zeros_like(old_frame)
+
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
