@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Video capture via webcam
-cam = cv2.VideoCapture('test.mp4')
+cam = cv2.VideoCapture('../Test/test.mp4')
 grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 corners = cv2.goodFeaturesToTrack(grey,25,0.01,10)
 corners = np.int0(corners)
