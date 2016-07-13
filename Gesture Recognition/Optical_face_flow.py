@@ -39,6 +39,15 @@ while True:
 			good_new = p1[st==1]
 			good_old = p0[st==1]
 
+			# draw the tracks
+			for i,(new,old) in enumerate(zip(good_new,good_old)):
+			  # print i
+			  a,b = new.ravel()
+			  c,d = old.ravel()
+			  cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
+			  cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
+			img = cv2.add(frame,mask)
+
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
 		if cv2.waitKey(20) & 0xFF == ord('q'):
