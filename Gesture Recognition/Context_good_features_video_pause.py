@@ -16,7 +16,7 @@ while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
     if ret:
-		grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+		gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		faces1 = faceCascade1.detectMultiScale(gray, 1.1, 5)
 		faces2 = faceCascade2.detectMultiScale(gray, 1.1, 5)
 		faces3 = faceCascade3.detectMultiScale(gray, 1.1, 5)
