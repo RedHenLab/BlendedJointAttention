@@ -10,7 +10,6 @@ video_capture = cam
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
-    print ret
     if ret:
     	grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		corners = cv2.goodFeaturesToTrack(grey,25,0.01,10)
