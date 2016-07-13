@@ -11,16 +11,6 @@ cam.set(4,480)
 video_capture = cam
 frame_num = 0
 
-# Take first frame and find corners in it
-while True:
-	ret, old_frame = cam.read()
-	if ret:
-		old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-		p0 = cv2.goodFeaturesToTrack(old_gray, mask = None, maxCorners = 100, qualityLevel = 0.3, minDistance = 7, blockSize = 7 )
-		# Create a mask image for drawing purposes
-		mask = np.zeros_like(old_frame)
-		break
-
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
@@ -30,8 +20,14 @@ while True:
 		img = frame
 		# Draw a rectangle around the faces
 		for (x, y, w, h) in faces1:
-			roi_gray = gray[y:y+h, x:x+w]
-			roi_color = frame[y:y+h, x:x+w]
+			if frame_num == 0:
+				roi_gray = gray[y:y+h, x:x+w]
+				roi_color = frame[y:y+h, x:x+w]
+				# Take first frame and find corners in it
+				p0 = cv2.goodFeaturesToTrack(roi_gray, mask = None, maxCorners = 100, qualityLevel = 0.3, minDistance = 7, blockSize = 7 )
+				# Create a mask image for drawing purposes
+				mask = np.zeros_like(old_frame)
+				frame_num = frame_num + 1
 			
 			# calculate optical flow
 			p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
