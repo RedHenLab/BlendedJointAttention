@@ -22,13 +22,13 @@ while True:
 		for (x, y, w, h) in faces1:
 			if frame_num == 0:
 				roi_gray = gray[y:y+h, x:x+w]
-				roi_color = frame[y:y+h, x:x+w]
 				# Take first frame and find corners in it
 				p0 = cv2.goodFeaturesToTrack(roi_gray, mask = None, maxCorners = 100, qualityLevel = 0.3, minDistance = 7, blockSize = 7 )
 				# Create a mask image for drawing purposes
 				mask = np.zeros_like(old_frame)
 				frame_num = frame_num + 1
-			
+			else :
+
 			# calculate optical flow
 			p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
 			
