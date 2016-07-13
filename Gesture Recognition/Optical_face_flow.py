@@ -45,7 +45,7 @@ while True:
 					cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
 					cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
 				img = cv2.add(frame,mask)
-
+		print frame_num
 		# Display the resulting frame
 		cv2.imshow('Video', img)
 		if cv2.waitKey(20) & 0xFF == ord('q'):
