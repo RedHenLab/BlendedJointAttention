@@ -33,12 +33,12 @@ while True:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (127, 128, 0), 2)
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
-		corners = cv2.goodFeaturesToTrack(grey,900,0.01,10)
-		corners = np.int0(corners)
+		# corners = cv2.goodFeaturesToTrack(grey,900,0.01,10)
+		# corners = np.int0(corners)
 		# print corners
-		for i in corners:
-			x,y = i.ravel()
-			cv2.circle(frame,(x,y),1,(0,0,255),-1)
+		# for i in corners:
+		# 	x,y = i.ravel()
+		# 	cv2.circle(frame,(x,y),1,(0,0,255),-1)
 
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
