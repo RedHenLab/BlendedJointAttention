@@ -25,7 +25,7 @@ while True:
 			# print corners
 			for i in corners:
 				x1,y1 = i.ravel()
-				cv2.circle(frame,(x+x1,y+y1),1,(0,0,255),-1)
+				cv2.circle(frame,(x+x1,y+y1),3,255,-1)
 
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
