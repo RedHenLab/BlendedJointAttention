@@ -39,7 +39,7 @@ while True:
 
 				# draw the tracks
 				for i,(new,old) in enumerate(zip(good_new,good_old)):
-					# print i
+					print i
 					a,b = new.ravel()
 					c,d = old.ravel()
 					cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
