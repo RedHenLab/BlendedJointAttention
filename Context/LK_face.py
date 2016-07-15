@@ -11,6 +11,8 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
+#import face cascades
+faceCascade2 = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
 
 # Take first frame and find corners in it
 ret, old_frame = video_capture.read()
