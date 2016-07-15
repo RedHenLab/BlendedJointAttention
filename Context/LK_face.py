@@ -25,18 +25,6 @@ frame_num = 0
 mask = np.zeros_like(old_frame)
 
 while True:
-	if frame_num == 0:
-	    # Take first frame and find corners in it
-		ret, old_frame = video_capture.read()
-		while ret == 0:
-			True
-
-		old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-		p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
-		
-		# Create a mask image for drawing purposes
-		mask = np.zeros_like(old_frame)
-
 	# Capture frame-by-frame
     ret, frame = video_capture.read()
     if ret:
@@ -61,6 +49,7 @@ while True:
 		  cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
 		frame = cv2.add(frame,mask)
 
+		frame_num = frame_num + 1
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
 		if cv2.waitKey(1) & 0xFF == ord('q'):
