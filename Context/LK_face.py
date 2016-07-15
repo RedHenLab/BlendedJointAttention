@@ -24,11 +24,16 @@ while True:
         # Take first frame and find corners in it
         old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
         faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
+
+        flag = 0
         
         for (x, y, w, h) in faces:
                 roi_gray = old_gray[y:y+h, x:x+w]
+                flag = 1
                 break
 
+        if flag == 1:
+                break
         # Display the resulting frame
         cv2.imshow('Video', old_frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
