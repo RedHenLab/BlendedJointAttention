@@ -6,18 +6,20 @@ from matplotlib import pyplot as plt
 lk_params = dict( winSize  = (15,15), maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
 
 # Video capture via webcam
-cam = cv2.VideoCapture(-1)
+cam = cv2.VideoCapture('../Test/test.mp4')
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
 # Take first frame and find corners in it
-ret, old_frame = video_capture.read()
-while ret == 0:
-	True
+def first_fame():
+	ret, old_frame = video_capture.read()
+	while ret == 0:
+		True
 
-old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
+	old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
+	p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
+
 
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
