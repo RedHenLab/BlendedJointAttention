@@ -25,8 +25,8 @@ faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
 roi_gray = np.ndarray([])
 # Draw a rectangle around the faces
 while True:
-for (x, y, w, h) in faces:
-        roi_gray = gray[y:y+h, x:x+w]
+        for (x, y, w, h) in faces:
+                roi_gray = gray[y:y+h, x:x+w]
 p0 = cv2.goodFeaturesToTrack(roi_gray, 90,0.01,10)
 
 frame_num = 0
