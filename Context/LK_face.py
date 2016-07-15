@@ -23,6 +23,11 @@ old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
 p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
 
+# Draw a rectangle around the faces
+for (x, y, w, h) in faces:
+    cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+    roi_gray = gray[y:y+h, x:x+w]
+
 frame_num = 0
 
 # Create a mask image for drawing purposes
