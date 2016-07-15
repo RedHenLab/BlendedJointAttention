@@ -42,10 +42,10 @@ while True:
 
 		# Draw a rectangle around the faces
 		for (x, y, w, h) in faces:
-		    roi_gray = gray[y:y+h, x:x+w]
+			roi_gray = gray[y:y+h, x:x+w]
 			corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
 			corners = np.int0(corners)
-
+	
 		# calculate optical flow
 		p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
 
