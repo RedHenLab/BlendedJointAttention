@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 lk_params = dict( winSize  = (15,15), maxLevel = 2, criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 10, 0.03))
 
 # Video capture via webcam
-cam = cv2.VideoCapture('../Test/test.mp4')
+cam = cv2.VideoCapture(-1)
 cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
