@@ -27,6 +27,12 @@ while True:
         
         for (x, y, w, h) in faces:
                 roi_gray = old_gray[y:y+h, x:x+w]
+
+        # Display the resulting frame
+        cv2.imshow('Video', old_frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+
 p0 = cv2.goodFeaturesToTrack(roi_gray, 90,0.01,10)
 
 frame_num = 0
