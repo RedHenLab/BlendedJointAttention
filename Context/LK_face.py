@@ -54,27 +54,27 @@ while True:
         if ret:
                 frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
-
+                flag = 0
                 for (x, y, w, h) in faces:
                         roi_gray = gray[y:y+h, x:x+w]
                         corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
                         corners = np.int0(corners)
-	
+                        flag = 1
 		# calculate optical flow
                 p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
 
 		# Select good points
-                if type(p1)!=None:
+                if flag == 1:
                         good_new = p1[st==1]
                         good_old = p0[st==1]
 
-		# draw the tracks
-                for i,(new,old) in enumerate(zip(good_new,good_old)):
-                        a,b = new.ravel()
-                        c,d = old.ravel()
-                        cv2.line(mask, (a,b),(c,d), (255,0,0), 2)
-                        cv2.circle(frame,(a,b),5,(255,0,0),-1)
-                frame = cv2.add(frame,mask)
+                        # draw the tracks
+                        for i,(new,old) in enumerate(zip(good_new,good_old)):
+                                a,b = new.ravel()
+                                c,d = old.ravel()
+                                cv2.line(mask, (a,b),(c,d), (255,0,0), 2)
+                                cv2.circle(frame,(a,b),5,(255,0,0),-1)
+                        frame = cv2.add(frame,mask)
 
                 frame_num = frame_num + 1
 
