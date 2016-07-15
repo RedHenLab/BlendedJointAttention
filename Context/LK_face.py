@@ -50,6 +50,13 @@ while True:
 		frame = cv2.add(frame,mask)
 
 		frame_num = frame_num + 1
+
+		if frame_num>30:
+			
+			# Now update the previous frame and previous points
+			old_gray = frame_gray.copy()
+			p0 = good_new.reshape(-1,1,2)
+			frame_num = 0
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
 		if cv2.waitKey(1) & 0xFF == ord('q'):
