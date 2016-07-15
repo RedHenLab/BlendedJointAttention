@@ -55,11 +55,15 @@ while True:
                 frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
                 flag = 0
+                x1 = 0
+                y1 = 0
                 for (x, y, w, h) in faces:
                         roi_gray = gray[y:y+h, x:x+w]
                         corners = cv2.goodFeaturesToTrack(roi_gray,90,0.01,10)
                         corners = np.int0(corners)
                         flag = 1
+                        x1 = x
+                        y1 = y
 		# calculate optical flow
                 p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
 
