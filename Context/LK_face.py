@@ -11,8 +11,6 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
-# Create some random colors
-color = np.random.randint(0,255,(100,3))
 
 # Take first frame and find corners in it
 ret, old_frame = video_capture.read()
@@ -49,8 +47,8 @@ while True:
 		  # print i
 		  a,b = new.ravel()
 		  c,d = old.ravel()
-		  cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
-		  cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
+		  cv2.line(mask, (a,b),(c,d), (255,0,0), 2)
+		  cv2.circle(frame,(a,b),5,(255,0,0),-1)
 		frame = cv2.add(frame,mask)
 
 		frame_num = frame_num + 1
