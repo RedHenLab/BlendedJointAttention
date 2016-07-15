@@ -78,7 +78,7 @@ while True:
 
                 frame_num = frame_num + 1
 
-                if frame_num>30:
+                if frame_num>30 and flag == 1:
 			
                         # Now update the previous frame and previous points
                         old_gray = frame_gray.copy()
