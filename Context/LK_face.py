@@ -8,6 +8,9 @@ cam.set(3,640)
 cam.set(4,480)
 video_capture = cam
 
+# Create some random colors
+color = np.random.randint(0,255,(100,3))
+
 # Take first frame and find corners in it
 ret, old_frame = cap.read()
 print ret
