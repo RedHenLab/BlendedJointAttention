@@ -27,6 +27,14 @@ while True:
 		grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		corners = cv2.goodFeaturesToTrack(grey,900,0.01,10)
 		corners = np.int0(corners)
+
+		# calculate optical flow
+		p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
+
+		# Select good points
+		good_new = p1[st==1]
+		good_old = p0[st==1]
+
 		# print corners
 		for i in corners:
 			x,y = i.ravel()
