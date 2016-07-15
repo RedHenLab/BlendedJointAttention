@@ -27,6 +27,7 @@ while True:
         
         for (x, y, w, h) in faces:
                 roi_gray = old_gray[y:y+h, x:x+w]
+                break
 
         # Display the resulting frame
         cv2.imshow('Video', old_frame)
