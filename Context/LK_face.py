@@ -22,7 +22,7 @@ while ret == 0:
 old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
 
-roi_gray = []
+roi_gray = np.ndarray([])
 # Draw a rectangle around the faces
 for (x, y, w, h) in faces:
     roi_gray = gray[y:y+h, x:x+w]
