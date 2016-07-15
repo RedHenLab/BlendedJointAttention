@@ -17,6 +17,9 @@ print ret
 old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 p0 = cv2.goodFeaturesToTrack(old_gray, 900,0.01,10)
 
+# Create a mask image for drawing purposes
+mask = np.zeros_like(old_frame)
+
 while True:
     # Capture frame-by-frame
     ret, frame = video_capture.read()
