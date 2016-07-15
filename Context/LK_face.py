@@ -12,8 +12,10 @@ video_capture = cam
 color = np.random.randint(0,255,(100,3))
 
 # Take first frame and find corners in it
-ret, old_frame = cap.read()
-print ret
+ret, old_frame = video_capture.read()
+while ret == 0:
+	True
+
 old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
 p0 = cv2.goodFeaturesToTrack(old_gray, 900,0.01,10)
 
@@ -22,9 +24,9 @@ mask = np.zeros_like(old_frame)
 
 while True:
     # Capture frame-by-frame
-    ret, frame = video_capture.read()
+    ret, new_frame = video_capture.read()
     if ret:
-		grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+		new_gray = cv2.cvtColor(new_frame, cv2.COLOR_BGR2GRAY)
 		corners = cv2.goodFeaturesToTrack(grey,900,0.01,10)
 		corners = np.int0(corners)
 
@@ -43,7 +45,7 @@ while True:
 		  c,d = old.ravel()
 		  cv2.line(mask, (a,b),(c,d), color[i].tolist(), 2)
 		  cv2.circle(frame,(a,b),5,color[i].tolist(),-1)
-		img = cv2.add(frame,mask)
+		frame = cv2.add(frame,mask)
 
 		# Display the resulting frame
 		cv2.imshow('Video', frame)
