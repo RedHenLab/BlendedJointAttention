@@ -23,7 +23,7 @@ while True:
 
         # Take first frame and find corners in it
         old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-        faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
+        faces = faceCascade.detectMultiScale(old_gray, 1.1, 5)
 
         flag = 0
         
@@ -64,8 +64,9 @@ while True:
                 p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
 
 		# Select good points
-                good_new = p1[st==1]
-                good_old = p0[st==1]
+                if type(p1)!=None:
+                        good_new = p1[st==1]
+                        good_old = p0[st==1]
 
 		# draw the tracks
                 for i,(new,old) in enumerate(zip(good_new,good_old)):
