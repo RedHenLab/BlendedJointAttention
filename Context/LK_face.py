@@ -20,7 +20,7 @@ while ret == 0:
 	True
 
 old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-p0 = cv2.goodFeaturesToTrack(old_gray, 900,0.01,10)
+p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
 
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
@@ -30,7 +30,7 @@ while True:
     ret, frame = video_capture.read()
     if ret:
 		frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-		corners = cv2.goodFeaturesToTrack(frame_gray,900,0.01,10)
+		corners = cv2.goodFeaturesToTrack(frame_gray,90,0.01,10)
 		corners = np.int0(corners)
 
 		# calculate optical flow
