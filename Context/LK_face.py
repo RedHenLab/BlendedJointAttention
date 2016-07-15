@@ -30,6 +30,7 @@ mask = np.zeros_like(old_frame)
 while True:
 	# Capture frame-by-frame
     ret, frame = video_capture.read()
+    print frame_num
     if ret:
 		frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		corners = cv2.goodFeaturesToTrack(frame_gray,90,0.01,10)
