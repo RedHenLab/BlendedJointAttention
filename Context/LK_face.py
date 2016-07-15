@@ -12,20 +12,29 @@ cam.set(4,480)
 video_capture = cam
 
 # Take first frame and find corners in it
-def first_fame():
-	ret, old_frame = video_capture.read()
-	while ret == 0:
-		True
+ret, old_frame = video_capture.read()
+while ret == 0:
+	True
 
-	old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-	p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
+old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
+p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
 
+frame_num = 0
 
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
 
 while True:
-    # Capture frame-by-frame
+	if frame_num == 0:
+	    # Take first frame and find corners in it
+		ret, old_frame = video_capture.read()
+		while ret == 0:
+			True
+
+		old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
+		p0 = cv2.goodFeaturesToTrack(old_gray, 90,0.01,10)
+
+	# Capture frame-by-frame
     ret, frame = video_capture.read()
     if ret:
 		frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
