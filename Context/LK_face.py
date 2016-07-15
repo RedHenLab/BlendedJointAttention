@@ -26,7 +26,7 @@ while True:
         faces = faceCascade.detectMultiScale(old_gray, 1.6, 5)
         
         for (x, y, w, h) in faces:
-                roi_gray = gray[y:y+h, x:x+w]
+                roi_gray = old_gray[y:y+h, x:x+w]
 p0 = cv2.goodFeaturesToTrack(roi_gray, 90,0.01,10)
 
 frame_num = 0
