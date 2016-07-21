@@ -19,6 +19,6 @@ hog = cv2.HOGDescriptor()
 hog.setSVMDetector( cv2.HOGDescriptor_getDefaultPeopleDetector() )
 cap=cv2.imread('test.jpg')
 frame=cap
-# found,w=hog.detectMultiScale(frame, winStride=(8,8), padding=(32,32), scale=1.05)
-# draw_detections(frame,found)
+found,w=hog.detectMultiScale(frame, winStride=(8,8), padding=(32,32), scale=1.05)
+draw_detections(frame,found)
 cv2.imwrite('result.jpg',frame)
