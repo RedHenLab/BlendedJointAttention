@@ -23,8 +23,8 @@ if __name__ == '__main__':
     cap=cv2.VideoCapture('vid.avi')
     while True:
         _,frame=cap.read()
-        found,w=hog.detectMultiScale(frame, winStride=(8,8), padding=(32,32), scale=1.05)
-        draw_detections(frame,found)
+        # found,w=hog.detectMultiScale(frame, winStride=(8,8), padding=(32,32), scale=1.05)
+        # draw_detections(frame,found)
         cv2.imshow('feed',frame)
         ch = 0xFF & cv2.waitKey(1)
         if ch == 27:
