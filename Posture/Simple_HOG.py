@@ -9,6 +9,6 @@ def draw_detections(img, rects, thickness = 1):
 
 hog = cv2.HOGDescriptor()
 im = cv2.imread('test.jpg')
-found,w=hog.detectMultiScale(frame, winStride=(8,8), padding=(32,32), scale=1.05)
+found,w=hog.detectMultiScale(im, winStride=(8,8), padding=(32,32), scale=1.05)
 draw_detections(im,found)
-print h.shape
+cv2.imwrite('Result1.jpg', im)
