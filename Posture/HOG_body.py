@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     hog = cv2.HOGDescriptor()
     hog.setSVMDetector( cv2.HOGDescriptor_getDefaultPeopleDetector() )
-    cap=cv2.VideoCapture('vid.avi')
+    cap=cv2.VideoCapture('test.mp4')
     while True:
         _,frame=cap.read()
         # found,w=hog.detectMultiScale(frame, winStride=(8,8), padding=(32,32), scale=1.05)
