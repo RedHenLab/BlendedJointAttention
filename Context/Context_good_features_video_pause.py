@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-# Video capture via webcam
+# Video capture via test file
 cam = cv2.VideoCapture('../Test/test.mp4')
 cam.set(3,640)
 cam.set(4,480)
