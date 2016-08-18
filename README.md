@@ -12,7 +12,7 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 Detection of number of human faces, possible extensions to their position and orientation. The files use Voila-Jones Haar classifier to detect human frontal and profile faces with the enhancement of template matching. The results can be seen as follows :
 
-<img src = '/Face Detection/Result_Images/Result5.jpg'><img src = '/Face Detection/Result_Images/Result6.jpg'>
+<img src = '/Face Detection/Result_Images/Result5.jpg'>
 
 
 ### Emotion recognition
