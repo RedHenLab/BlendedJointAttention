@@ -1,5 +1,4 @@
 import cv2
-import sys
 
 # Defining cascade variables
 faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
