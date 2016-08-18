@@ -9,23 +9,37 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 Sub-repositories:
 
-<ol>
-<li> Face detection : Detection of number of human faces, possible extensions to their position and orientation</li>
-<li> Emotion recognition : Recognising different emotions (sad, happy, surprised, neutral etc.) using a CNN classifier. To see and example run :
+* Face detection : Detection of number of human faces, possible extensions to their position and orientation
+
+
+* Emotion recognition : Recognising different emotions (sad, happy, surprised, neutral etc.) using a CNN classifier. To see and example run :
 
 ```python webcam-emotions.py --displayWebcam --seeFaces --netFile soumitra.p```
 
 To get best results (and tailored for the person who is using the webcam app), you can use the `webcam-emotions.py` script to record data, as follows,(train happy by replacing sad by happy):
 
-```python webcam-emotions.py --displayWebcam --seeFaces --gather_training_data  --recording_emotion sad```</li>
-<li> Gaze direction recognition : Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.</li>
-<li> Age detection : Categorising a person's age via facial features (outputs a range of possible age values)</li>
-<li> Facial Landmark detection : Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.</li> 
-<li> Blended CLassic Joint attention : Detectiong instances of BCJA from instances without BCJA </li>
-<li> Reaction Shots : Analyse reaction shots (of surprise, awe etc.) </li>
-<li> Gesture Recognition : Recognising multimodal gestures </li>
-<li> Head pose : Configuiring head pose to gaze direction and independent head pose stimation</li>
-</ol>
+```python webcam-emotions.py --displayWebcam --seeFaces --gather_training_data  --recording_emotion sad```
+
+
+* Gaze direction recognition : Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.</li>
+
+
+* Age detection : Categorising a person's age via facial features (outputs a range of possible age values)
+
+
+* Facial Landmark detection : Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.
+
+
+* Blended CLassic Joint attention : Detectiong instances of BCJA from instances without BCJA
+
+
+* Reaction Shots : Analyse reaction shots (of surprise, awe etc.) 
+
+
+* Gesture Recognition : Recognising multimodal gestures
+
+
+* Head pose : Configuiring head pose to gaze direction and independent head pose stimation
 
 ----------------------------------------
 
