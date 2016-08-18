@@ -38,7 +38,7 @@ The step-wise procedure is as follows :
 <img src = '/Gaze Direction/Result_Images/Result2.jpg'>
 * Extracting and thresholding the area near the eyes so that the dark part is apparent
 
-<img src = '/Gaze Direction/Result_Images/eye1.png'><img src = '/Gaze Direction/Result_Images/thresh_eye.png'>
+<img src = '/Gaze Direction/Result_Images/eye1.jpg'><img src = '/Gaze Direction/Result_Images/thresh_eye.jpg'>
 * Detection of blobs in the specified area
 * Finding centre of the blob via the algorithms
 
