@@ -76,16 +76,18 @@ Detecting major facial landmarks, which is useful for Gaze direction and Emotion
 
 ### Head pose
 
-Configuiring head pose to gaze direction and independent head pose stimation
+Configuiring head pose to gaze direction and independent head pose estimation, via the features tracked in the Facial landmark repository. 
+
+<img src = '/Head Pose/Output.gif'>
+
+### Gesture Recognition
+
+Recognising multimodal gestures
 
 ### Reaction Shots
 
 Analyse reaction shots (of surprise, awe etc.) 
 
-
-### Gesture Recognition
-
-Recognising multimodal gestures
 
 
 ----------------------------------------
