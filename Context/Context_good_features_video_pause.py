@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
 
 # Video capture via webcam
 cam = cv2.VideoCapture('../Test/test.mp4')
