@@ -58,7 +58,15 @@ Recognising what context is a specific scene in using Lucas-Kanade, optical flow
 
 ### Scene continuity 
 
-Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. 
+Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. The following image would give a better insight into how the threshold and mean images were compared
+
+<img src = '/Scene/Scene2.png'>
+
+The upgiven image was how the threshold changes at different instances with it being re-initialised once a new frame is detected. The following image is a pictorial representation of how much an image differs from another.
+
+<img src = '/Scene/Scene1.png'>
+
+If this difference crosses a certain threshold, scene change is reported.
 
 ### Facial Landmark detection
 
