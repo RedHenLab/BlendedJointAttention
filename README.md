@@ -78,7 +78,7 @@ Detecting major facial landmarks, which is useful for Gaze direction and Emotion
 
 Configuiring head pose to gaze direction and independent head pose estimation, via the features tracked in the Facial landmark repository. 
 
-<img src = '/Head Pose/Output.gif'>
+<img src = '/Head pose/Output.gif'>
 
 ### Gesture Recognition
 
