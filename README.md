@@ -1,5 +1,4 @@
-Belended Classic Joint Attention Repository
-============================================
+# Blended Classic Joint Attention Repository
 
 <i> Pull requests from members other than that of Red Hen Labs would not be merged here. This is just a repository for temporary work. If you still believe that there is a threat to humanity which this repo may endure, you may send a mail to agarwalsoumitra1504[at]gmail[dot]com. If you wish to contribute to blended joint attention look at [this](https://github.com/RedHenLab/BlendedJointAttentionClean) repository.</i> 
 
@@ -7,23 +6,64 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 ---------------------------------------------
 
-Sub-repositories:
+## Sub-repositories
 
-<ol>
-<li> Face detection : Detection of number of human faces, possible extensions to their position and orientation</li>
-<li> Emotion recognition : Recognising different emotions (sad, happy, surprised, neutral etc.) using a CNN classifier</li>
-<li> Gaze direction recognition : Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.</li>
-<li> Age detection : Categorising a person's age via facial features (outputs a range of possible age values)</li>
-<li> Facial Landmark detection : Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.</li> 
-<li> Blended CLassic Joint attention : Detectiong instances of BCJA from instances without BCJA </li>
-<li> Reaction Shots : Analyse reaction shots (of surprise, awe etc.) </li>
-<li> Gesture Recognition : Recognising multimodal gestures </li>
-<li> Head pose : Configuiring head pose to gaze direction and independent head pose stimation</li>
-</ol>
+### Face detection
+
+Detection of number of human faces, possible extensions to their position and orientation
+
+
+### Emotion recognition
+
+Recognising different emotions (sad, happy, surprised, neutral etc.) using a CNN classifier. To see and example run :
+
+```python webcam-emotions.py --displayWebcam --seeFaces --netFile soumitra.p```
+
+To get best results (and tailored for the person who is using the webcam app), you can use the `webcam-emotions.py` script to record data, as follows,(train happy by replacing sad by happy):
+
+```python webcam-emotions.py --displayWebcam --seeFaces --gather_training_data  --recording_emotion sad```
+
+### Gaze direction recognition 
+
+Calculating angle of ones gaze using initial pupil detection and terminal points of eyes. The algorithm used was from the [paper](http://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf) which deals with prediction of centre of the eye via gradients.
+
+The step-wise procedure is as follows :
+
+* Extraction of eyes from the face, via Voila-Jones Haar classifier.
+* Thresholding the area near the eyes so that the dark part is apparent
+* Detection of blobs in the specified area
+* Finding centre of the blob via the algorithms
+
+### Context recognition
+
+Recognising what context is a specific scene in using Lucas-Kanade optical flow.
+
+### Scene continuity 
+
+Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. 
+
+### Facial Landmark detection
+
+Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.
+
+
+### Reaction Shots
+
+Analyse reaction shots (of surprise, awe etc.) 
+
+
+### Gesture Recognition
+
+Recognising multimodal gestures
+
+
+### Head pose
+
+Configuiring head pose to gaze direction and independent head pose stimation
 
 ----------------------------------------
 
-Required Packages:
+## Required Packages:
 
 <ol>
 	<li> Python 2.7.x </li>
@@ -34,11 +74,12 @@ Required Packages:
 	<li> DLib </li>
 	<li> pympi-ling </li>
 	<li> PySceneDetect </li>
+	<li> Read </li>
 </ol>
 
 -----------------------------------------
 
-Authors:
+## Authors:
 
 <ol>
  	<li> Dr.Mark Turner </li>
