@@ -45,9 +45,13 @@ Several other algorithms, including use of hough circles are present in `bin` wh
 
 ### Context recognition
 
-Recognising what context is a specific scene in using Lucas-Kanade optical flow. The following were the outputs in accordance to the used algorithms 
+Recognising what context is a specific scene in using Lucas-Kanade, optical flow. The following were the outputs in accordance to the used algorithms 
 
-*
+* Good features to track 
+<img src = '/Context/image.jpg'><img src = '/Context/Good_Features.jpg'>
+
+* Lucas-Kanade 
+<img src = '/Context/image.jpg'>
 
 ### Scene continuity 
 
