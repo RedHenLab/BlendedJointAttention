@@ -10,7 +10,9 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 ### Face detection
 
-Detection of number of human faces, possible extensions to their position and orientation
+Detection of number of human faces, possible extensions to their position and orientation. The files use Voila-Jones Haar classifier to detect human frontal and profile faces with the enhancement of template matching. The results can be seen as follows :
+
+* 
 
 
 ### Emotion recognition
@@ -46,6 +48,9 @@ Detection of a scene change by creating an average image at every new scene and 
 
 Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.
 
+### Head pose
+
+Configuiring head pose to gaze direction and independent head pose stimation
 
 ### Reaction Shots
 
@@ -56,10 +61,6 @@ Analyse reaction shots (of surprise, awe etc.)
 
 Recognising multimodal gestures
 
-
-### Head pose
-
-Configuiring head pose to gaze direction and independent head pose stimation
 
 ----------------------------------------
 
