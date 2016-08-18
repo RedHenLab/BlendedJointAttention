@@ -53,6 +53,9 @@ Recognising what context is a specific scene in using Lucas-Kanade, optical flow
 * Lucas-Kanade 
 <img src = '/Context/LK.png'>
 
+* Optical flow
+<img src = '/Context/image.jpg'>
+
 ### Scene continuity 
 
 Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. 
