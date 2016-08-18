@@ -10,8 +10,13 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 ### Face detection
 
-Detection of number of human faces, possible extensions to their position and orientation
+Detection of number of human faces, possible extensions to their position and orientation. The files use Voila-Jones Haar classifier to detect human frontal and profile faces with the enhancement of template matching. The results can be seen as follows :
 
+<img src = '/Face Detection/Result_Images/Result5.jpg'>
+
+Template matching is a technique used to find a smaller image in a larger one. It works by sliding the small image accross the big one and it uses math to calculate which part of the bigger image is most likely to be the small image. This algorithm is nice because it always returns a value, unlike Haar cascades which is returns a position only if it finds a face.
+
+<img src = '/Face Detection/Result_Images/img.png'>
 
 ### Emotion recognition
 
@@ -29,37 +34,61 @@ Calculating angle of ones gaze using initial pupil detection and terminal points
 
 The step-wise procedure is as follows :
 
-* Extraction of eyes from the face, via Voila-Jones Haar classifier.
-* Thresholding the area near the eyes so that the dark part is apparent
+* Extraction of eyes from the face, via `Voila-Jones` Haar classifier
+<img src = '/Gaze Direction/Result_Images/Result2.jpg'>
+* Extracting and thresholding the area near the eyes so that the dark part is apparent
 * Detection of blobs in the specified area
-* Finding centre of the blob via the algorithms
+* Finding centre of the blob via the algorithms<br>
+<img src = '/Gaze Direction/Result_Images/thresh_eye.jpg'><img src = '/Gaze Direction/Result_Images/eye1.jpg'><img src = '/Gaze Direction/Result_Images/eye2.jpg'>
+
+Several other algorithms, including use of hough circles are present in `bin` which were descarded as second to the upgiven.
 
 ### Context recognition
 
-Recognising what context is a specific scene in using Lucas-Kanade optical flow.
+Recognising what context is a specific scene in using Lucas-Kanade, optical flow. The following were the outputs in accordance to the used algorithms 
+
+* Good features to track <br>
+<img src = '/Context/image.jpg'><img src = '/Context/Good_Features.png'>
+
+* Lucas-Kanade <br>
+<img src = '/Context/LK.png'>
+
+* Optical flow<br>
+<img src = '/Context/Optical_flow.png'>
 
 ### Scene continuity 
 
-Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. 
+Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. The following image would give a better insight into how the threshold and mean images were compared
+
+<img src = '/Scene_Continuity/Scene2.png'>
+
+The upgiven image was how the threshold changes at different instances with it being re-initialised once a new frame is detected. The following image is a pictorial representation of how much an image differs from another.
+
+<img src = '/Scene_Continuity/Scene1.png'>
+
+If this difference crosses a certain threshold, scene change is reported.
 
 ### Facial Landmark detection
 
-Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.
+Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition. Pre-built python library `Dlib` was used to create a mat of human facial features, with a little tweaking. The outputs are as follows 
 
+<img src = '/Facial Features/Features1.png'>
+
+### Head pose
+
+Configuiring head pose to gaze direction and independent head pose estimation, via the features tracked in the Facial landmark repository. 
+
+<img src = '/Head pose/output.gif' loop=10>
+
+### Gesture Recognition
+
+Recognising multimodal gestures
 
 ### Reaction Shots
 
 Analyse reaction shots (of surprise, awe etc.) 
 
 
-### Gesture Recognition
-
-Recognising multimodal gestures
-
-
-### Head pose
-
-Configuiring head pose to gaze direction and independent head pose stimation
 
 ----------------------------------------
 
