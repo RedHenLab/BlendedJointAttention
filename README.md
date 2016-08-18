@@ -47,13 +47,13 @@ Several other algorithms, including use of hough circles are present in `bin` wh
 
 Recognising what context is a specific scene in using Lucas-Kanade, optical flow. The following were the outputs in accordance to the used algorithms 
 
-* Good features to track 
+* Good features to track <br>
 <img src = '/Context/image.jpg'><img src = '/Context/Good_Features.png'>
 
-* Lucas-Kanade 
+* Lucas-Kanade <br>
 <img src = '/Context/LK.png'>
 
-* Optical flow
+* Optical flow<br>
 <img src = '/Context/Optical_flow.png'>
 
 ### Scene continuity 
