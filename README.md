@@ -70,7 +70,9 @@ If this difference crosses a certain threshold, scene change is reported.
 
 ### Facial Landmark detection
 
-Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.
+Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition. Pre-built python library `Dlib` was used to create a mat of human facial features, with a little tweaking. The outputs are as follows 
+
+<img src = '/Facial Features/Features1.png'>
 
 ### Head pose
 
