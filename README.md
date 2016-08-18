@@ -41,9 +41,13 @@ The step-wise procedure is as follows :
 * Finding centre of the blob via the algorithms<br>
 <img src = '/Gaze Direction/Result_Images/thresh_eye.jpg'><img src = '/Gaze Direction/Result_Images/eye1.jpg'><img src = '/Gaze Direction/Result_Images/eye2.jpg'>
 
+Several other algorithms, including use of hough circles are present in `bin` which were descarded as second to the upgiven.
+
 ### Context recognition
 
-Recognising what context is a specific scene in using Lucas-Kanade optical flow.
+Recognising what context is a specific scene in using Lucas-Kanade optical flow. The following were the outputs in accordance to the used algorithms 
+
+*
 
 ### Scene continuity 
 
