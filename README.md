@@ -14,6 +14,9 @@ Detection of number of human faces, possible extensions to their position and or
 
 <img src = '/Face Detection/Result_Images/Result5.jpg'>
 
+Template matching is a technique used to find a smaller image in a larger one. It works by sliding the small image accross the big one and it uses math to calculate which part of the bigger image is most likely to be the small image. This algorithm is nice because it always returns a value, unlike Haar cascades which is returns a position only if it finds a face.
+
+<img src = '/Face Detection/Result_Images/img.png'>
 
 ### Emotion recognition
 
