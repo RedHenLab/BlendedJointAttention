@@ -38,8 +38,8 @@ The step-wise procedure is as follows :
 <img src = '/Gaze Direction/Result_Images/Result2.jpg'>
 * Extracting and thresholding the area near the eyes so that the dark part is apparent
 * Detection of blobs in the specified area
-* Finding centre of the blob via the algorithms
-<img src = '/Gaze Direction/Result_Images/eye1.jpg'><img src = '/Gaze Direction/Result_Images/thresh_eye.jpg'><img src = '/Gaze Direction/Result_Images/eye2.jpg'>
+* Finding centre of the blob via the algorithms<br>
+<img src = '/Gaze Direction/Result_Images/thresh_eye.jpg'><img src = '/Gaze Direction/Result_Images/eye1.jpg'><img src = '/Gaze Direction/Result_Images/eye2.jpg'>
 
 ### Context recognition
 
