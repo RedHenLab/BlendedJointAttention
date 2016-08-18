@@ -23,10 +23,11 @@ To get best results (and tailored for the person who is using the webcam app), y
 
 ```python webcam-emotions.py --displayWebcam --seeFaces --gather_training_data  --recording_emotion sad```
 
-
 ### Gaze direction recognition 
 
-Calculating angle of ones gaze using initial pupil detection and terminal points of eyes.
+Calculating angle of ones gaze using initial pupil detection and terminal points of eyes. The algorithm used was from the [paper](http://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf) which deals with prediction of centre of the eye via gradients.
+
+### Context recognition
 
 
 ### Age detection
