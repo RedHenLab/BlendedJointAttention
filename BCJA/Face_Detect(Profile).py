@@ -3,6 +3,7 @@ import cv2
 # Defining cascade variables
 faceCascade1 = cv2.CascadeClassifier('haarcascades/haarcascade_profileface.xml')
 faceCascade2 = cv2.CascadeClassifier('lbp_cascades/lbpcascade_profileface.xml')
+
 # Video capture via webcam
 cam = cv2.VideoCapture(-1)
 cam.set(3,640)
