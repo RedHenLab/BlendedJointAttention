@@ -35,6 +35,7 @@ Calculating angle of ones gaze using initial pupil detection and terminal points
 The step-wise procedure is as follows :
 
 * Extraction of eyes from the face, via `Voila-Jones` Haar classifier
+<img src = '/Gaze Direction/Result_Images/Result2.jpg'>
 * Thresholding the area near the eyes so that the dark part is apparent
 * Detection of blobs in the specified area
 * Finding centre of the blob via the algorithms
