@@ -27,22 +27,24 @@ To get best results (and tailored for the person who is using the webcam app), y
 
 Calculating angle of ones gaze using initial pupil detection and terminal points of eyes. The algorithm used was from the [paper](http://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf) which deals with prediction of centre of the eye via gradients.
 
+The step-wise procedure is as follows :
+
+* Extraction of eyes from the face, via Voila-Jones Haar classifier.
+* Thresholding the area near the eyes so that the dark part is apparent
+* Detection of blobs in the specified area
+* Finding centre of the blob via the algorithms
+
 ### Context recognition
 
+Recognising what context is a specific scene in using Lucas-Kanade optical flow.
 
-### Age detection
+### Scene continuity 
 
-Categorising a person's age via facial features (outputs a range of possible age values)
-
+Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. 
 
 ### Facial Landmark detection
 
 Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition.
-
-
-### Blended CLassic Joint attention
-
-Detectiong instances of BCJA from instances without BCJA
 
 
 ### Reaction Shots
