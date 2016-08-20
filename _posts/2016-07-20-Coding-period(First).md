@@ -28,7 +28,15 @@ classifier, thus improving it altogether.
 
 ### Work flow moderations
 
-Since there are a lot of people working, there is a lot which is common across different proposals. So the work-flow changes more often than not. Thus, when the coding period began, what I needed to do to make a significant contribution to the organisation was very different that what I had proposed. Before the mid-term I was working on the `Red-Hen Lab` repository [BlendedClassicJointAttention](https://github.com/RedHenLab/BlendedJointAttention). The documentation is shown here :
+Since there are a lot of people working, there is a lot which is common across different proposals. So the work-flow changes more often than not. Thus, when the coding period began, what I needed to do to make a significant contribution to the organisation was very different that what I had proposed. Before the mid-term I was working on the `Red-Hen Lab` repository [BlendedClassicJointAttention](https://github.com/RedHenLab/BlendedJointAttention).
+
+### Repositories 
+
+There were two repositories that were worked upon the period. 
+
+<ol>
+<li> [BlendedClassicJointAttention](https://github.com/RedHenLab/BlendedJointAttention) : Workshop of algorithms where every method implemented was present. </li>
+<li> [BlendedClassicJointAttentionClean](https://github.com/RedHenLab/BlendedJointAttentionClean) : A python library like structure to use the accepted algorithm implementations all at one place.</li>
 
 # Blended Classic Joint Attention Repository
 
@@ -106,7 +114,7 @@ Detecting major facial landmarks, which is useful for Gaze direction and Emotion
 
 Configuiring head pose to gaze direction and independent head pose estimation, via the features tracked in the Facial landmark repository. 
 
-<img src = '{{ site.url }}/img/output.gif' loop=10>
+<img src = '{{ site.url }}/img/output.gif'>
 
 ### Gesture Recognition
 
