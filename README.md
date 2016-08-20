@@ -87,7 +87,13 @@ Recognising multimodal gestures. Since this required parsing through ELAN files 
 Body posture recognition was worked upon using flowing puppets and Histogram of gradients.
 Something like the walking posture can be seen here
 
-<img src = '/Posture/result.jpg' loop=10>
+<img src = '/Posture/result.jpg'>
+
+### Window Size
+
+The size and number of different windows is the giveaway clue to predicting whether Blended Classical Joint Attention exxists or not. Thus contour detection and shape matching techniques were used to predict the number of rectngular shapes.
+
+<img src = '/Window Size/Result_Images/Temp.jpg'>
 
 ### Reaction Shots
 
