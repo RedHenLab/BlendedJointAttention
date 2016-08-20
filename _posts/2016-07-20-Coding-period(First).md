@@ -145,7 +145,7 @@ Which looks something like this :
 
 <img src = '{{ site.url }}/img/BCJA.jpg'>
 
-The repository can be looked upon [here](https://github.com/RedHenLab/BlendedJointAttentionClean)
+The repository can be looked upon [here](https://github.com/RedHenLab/BlendedJointAttentionClean). The accepted algorithms were placed on the Case High performance computing cluster. 
 
 ### Required Packages:
 
