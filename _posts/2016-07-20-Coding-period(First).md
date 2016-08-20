@@ -137,6 +137,16 @@ The size and number of different windows is the giveaway clue to predicting whet
 Analyse reaction shots (of surprise, awe etc.) 
 
 
+
+## Blended joint attention clean
+
+A python library like structure to use the accepted algorithm implementations all at one place.
+Which looks something like this :
+
+<img src = '{{ site.url }}/img/BCJA.jpg'>
+
+The repository can be looked upon [here](https://github.com/RedHenLab/BlendedJointAttentionClean)
+
 ### Required Packages:
 
 <ol>
@@ -159,9 +169,6 @@ Analyse reaction shots (of surprise, awe etc.)
 	<li> <a href = "https://github.com/SoumitraAgarwal" target="_blank">Soumitra Agarwal</a> :neckbeard: </li>
 	<li> Debayan Das </li>
 </ol>
-
-## Blended joint attention clean
-
 
 ###### Thank you for reading 
 
