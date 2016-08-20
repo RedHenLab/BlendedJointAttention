@@ -67,7 +67,7 @@ The step-wise procedure is as follows :
 * Extracting and thresholding the area near the eyes so that the dark part is apparent
 * Detection of blobs in the specified area
 * Finding centre of the blob via the algorithms<br>
-<img src = '/Gaze Direction/Result_Images/thresh_eye.jpg'><img src = '/Gaze Direction/Result_Images/eye1.jpg'><img src = '/Gaze Direction/Result_Images/eye2.jpg'>
+<img src = '{{ site.url }}/img/thresh_eye.jpg'><img src = '{{ site.url }}/img/eye1.jpg'><img src = '{{ site.url }}/img/eye2.jpg'>
 
 Several other algorithms, including use of hough circles are present in `bin` which were descarded as second to the upgiven.
 
@@ -76,13 +76,13 @@ Several other algorithms, including use of hough circles are present in `bin` wh
 Recognising what context is a specific scene in using Lucas-Kanade, optical flow. The following were the outputs in accordance to the used algorithms 
 
 * Good features to track <br>
-<img src = '/Context/image.jpg'><img src = '/Context/Good_Features.png'>
+<img src = '{{ site.url }}/img/image.jpg'><img src = '{{ site.url }}/img/Good_Features.png'>
 
 * Lucas-Kanade <br>
-<img src = '/Context/LK.png'>
+<img src = '{{ site.url }}/img/LK.png'>
 
 * Optical flow<br>
-<img src = '/Context/Optical_flow.png'>
+<img src = '{{ site.url }}/img/Optical_flow.png'>
 
 ### Scene continuity 
 
@@ -118,6 +118,12 @@ Body posture recognition was worked upon using flowing puppets and Histogram of 
 Something like the walking posture can be seen here
 
 <img src = '{{ site.url }}/img/result.jpg'>
+
+### Window Size
+
+The size and number of different windows is the giveaway clue to predicting whether Blended Classical Joint Attention exxists or not. Thus contour detection and shape matching techniques were used to predict the number of rectngular shapes.
+
+<img src = '/Window Size/Result_Images/Temp.jpg'>
 
 ### Reaction Shots
 
