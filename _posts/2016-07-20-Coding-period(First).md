@@ -63,7 +63,7 @@ Calculating angle of ones gaze using initial pupil detection and terminal points
 The step-wise procedure is as follows :
 
 * Extraction of eyes from the face, via `Voila-Jones` Haar classifier
-<img src = '/Gaze Direction/Result_Images/Result2.jpg'>
+<img src = '{{ site.url }}/img/Result2.jpg'>
 * Extracting and thresholding the area near the eyes so that the dark part is apparent
 * Detection of blobs in the specified area
 * Finding centre of the blob via the algorithms<br>
@@ -123,7 +123,7 @@ Something like the walking posture can be seen here
 
 The size and number of different windows is the giveaway clue to predicting whether Blended Classical Joint Attention exxists or not. Thus contour detection and shape matching techniques were used to predict the number of rectngular shapes.
 
-<img src = '/Window Size/Result_Images/Temp.jpg'>
+<img src = '{{ site.url }}/img/Temp.jpg'>
 
 ### Reaction Shots
 
