@@ -143,7 +143,7 @@ Analyse reaction shots (of surprise, awe etc.)
 A python library like structure to use the accepted algorithm implementations all at one place.
 Which looks something like this :
 
-<img src = '{{ site.url }}/img/BCJA.jpg'>
+<img src = '{{ site.url }}/img/BCJA.png'>
 
 The repository can be looked upon [here](https://github.com/RedHenLab/BlendedJointAttentionClean). The accepted algorithms were placed on the Case High performance computing cluster. 
 
