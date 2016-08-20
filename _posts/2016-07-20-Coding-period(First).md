@@ -34,9 +34,8 @@ Since there are a lot of people working, there is a lot which is common across d
 
 There were two repositories that were worked upon the period. 
 
-<ol>
-<li> [BlendedClassicJointAttention](https://github.com/RedHenLab/BlendedJointAttention) : Workshop of algorithms where every method implemented was present. </li>
-<li> [BlendedClassicJointAttentionClean](https://github.com/RedHenLab/BlendedJointAttentionClean) : A python library like structure to use the accepted algorithm implementations all at one place.</li>
+* [BlendedClassicJointAttention](https://github.com/RedHenLab/BlendedJointAttention) : Workshop of algorithms where every method implemented was present. 
+* [BlendedClassicJointAttentionClean](https://github.com/RedHenLab/BlendedJointAttentionClean) : A python library like structure to use the accepted algorithm implementations all at one place.
 
 # Blended Classic Joint Attention Repository
 
