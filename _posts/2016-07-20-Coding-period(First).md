@@ -26,6 +26,8 @@ classifier, thus improving it altogether.
 
 * Scene continuity and change detection.
 
+### Work flow moderations
+
 Since there are a lot of people working, there is a lot which is common across different proposals. So the work-flow changes more often than not. Thus, when the coding period began, what I needed to do to make a significant contribution to the organisation was very different that what I had proposed. Before the mid-term I was working on the `Red-Hen Lab` repository [BlendedClassicJointAttention](https://github.com/RedHenLab/BlendedJointAttention). The documentation is shown here :
 
 # Blended Classic Joint Attention Repository
@@ -38,11 +40,11 @@ This repository deals with work done by The Distibuted Red Hen Lab towards class
 
 Detection of number of human faces, possible extensions to their position and orientation. The files use Voila-Jones Haar classifier to detect human frontal and profile faces with the enhancement of template matching. The results can be seen as follows :
 
-<img src = '/Face Detection/Result_Images/Result5.jpg'>
+<img src = '{{ site.url }}/img/Result5.jpg'>
 
 Template matching is a technique used to find a smaller image in a larger one. It works by sliding the small image accross the big one and it uses math to calculate which part of the bigger image is most likely to be the small image. This algorithm is nice because it always returns a value, unlike Haar cascades which is returns a position only if it finds a face.
 
-<img src = '/Face Detection/Result_Images/img.png'>
+<img src = '{{ site.url }}/img/img.png'>
 
 ### Emotion recognition
 
@@ -86,11 +88,11 @@ Recognising what context is a specific scene in using Lucas-Kanade, optical flow
 
 Detection of a scene change by creating an average image at every new scene and calculating the difference with the newly observed. The following image would give a better insight into how the threshold and mean images were compared
 
-<img src = '/Scene_Continuity/Scene2.png'>
+<img src = '{{ site.url }}/img/Scene2.png'>
 
 The upgiven image was how the threshold changes at different instances with it being re-initialised once a new frame is detected. The following image is a pictorial representation of how much an image differs from another.
 
-<img src = '/Scene_Continuity/Scene1.png'>
+<img src = '{{ site.url }}/img/Scene1.png'>
 
 If this difference crosses a certain threshold, scene change is reported.
 
@@ -98,17 +100,24 @@ If this difference crosses a certain threshold, scene change is reported.
 
 Detecting major facial landmarks, which is useful for Gaze direction and Emotion recognition. Pre-built python library `Dlib` was used to create a mat of human facial features, with a little tweaking. The outputs are as follows 
 
-<img src = '/Facial Features/Features1.png'>
+<img src = '{{ site.url }}/img/Features1.png'>
 
 ### Head pose
 
 Configuiring head pose to gaze direction and independent head pose estimation, via the features tracked in the Facial landmark repository. 
 
-<img src = '/Head pose/output.gif' loop=10>
+<img src = '{{ site.url }}/img/output.gif' loop=10>
 
 ### Gesture Recognition
 
-Recognising multimodal gestures
+Recognising multimodal gestures. Since this required parsing through ELAN files and reading EAF for different gesture signals combined with video.
+
+### Posture Recognition
+
+Body posture recognition was worked upon using flowing puppets and Histogram of gradients.
+Something like the walking posture can be seen here
+
+<img src = '{{ site.url }}/img/result.jpg'>
 
 ### Reaction Shots
 
@@ -137,6 +146,8 @@ Analyse reaction shots (of surprise, awe etc.)
 	<li> <a href = "https://github.com/SoumitraAgarwal" target="_blank">Soumitra Agarwal</a> :neckbeard: </li>
 	<li> Debayan Das </li>
 </ol>
+
+### Blended joint attention clean
 
 
 ###### Thank you for reading 
