@@ -34,8 +34,6 @@ Since there are a lot of people working, there is a lot which is common across d
 
 This repository deals with work done by The Distibuted Red Hen Lab towards classification of different instances of blended classic joint attention in various form of print, audio and video media. For more information visit : https://sites.google.com/site/distributedlittleredhen/home/the-cognitive-core-research-topics-in-red-hen/the-barnyard/blended-classic-joint-attention
 
----------------------------------------------
-
 ## Sub-repositories
 
 ### Face detection
@@ -119,9 +117,6 @@ Recognising multimodal gestures
 Analyse reaction shots (of surprise, awe etc.) 
 
 
-
-----------------------------------------
-
 ## Required Packages:
 
 <ol>
@@ -136,8 +131,6 @@ Analyse reaction shots (of surprise, awe etc.)
 	<li> Read </li>
 </ol>
 
------------------------------------------
-
 ## Authors:
 
 <ol>
@@ -146,7 +139,6 @@ Analyse reaction shots (of surprise, awe etc.)
 	<li> <a href = "https://github.com/SoumitraAgarwal" target="_blank">Soumitra Agarwal</a> :neckbeard: </li>
 	<li> Debayan Das </li>
 </ol>
-----------------------------------------
 
 
 ###### Thank you for reading 
