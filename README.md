@@ -4,8 +4,6 @@
 
 This repository deals with work done by The Distibuted Red Hen Lab towards classification of different instances of blended classic joint attention in various form of print, audio and video media. For more information visit : https://sites.google.com/site/distributedlittleredhen/home/the-cognitive-core-research-topics-in-red-hen/the-barnyard/blended-classic-joint-attention
 
----------------------------------------------
-
 ## Sub-repositories
 
 ### Face detection
@@ -82,15 +80,19 @@ Configuiring head pose to gaze direction and independent head pose estimation, v
 
 ### Gesture Recognition
 
-Recognising multimodal gestures
+Recognising multimodal gestures. Since this required parsing through ELAN files and reading EAF for different gesture signals combined with video.
+
+### Posture Recognition
+
+Body posture recognition was worked upon using flowing puppets and Histogram of gradients.
+Something like the walking posture can be seen here
+
+<img src = '/Posture/result.jpg' loop=10>
 
 ### Reaction Shots
 
 Analyse reaction shots (of surprise, awe etc.) 
 
-
-
-----------------------------------------
 
 ## Required Packages:
 
@@ -106,8 +108,6 @@ Analyse reaction shots (of surprise, awe etc.)
 	<li> Read </li>
 </ol>
 
------------------------------------------
-
 ## Authors:
 
 <ol>
@@ -116,4 +116,3 @@ Analyse reaction shots (of surprise, awe etc.)
 	<li> <a href = "https://github.com/SoumitraAgarwal" target="_blank">Soumitra Agarwal</a> :neckbeard: </li>
 	<li> Debayan Das </li>
 </ol>
-----------------------------------------
